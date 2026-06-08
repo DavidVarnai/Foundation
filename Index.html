@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Foundation Venture — East Bay — Brand Mockups</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,900&family=Space+Mono:wght@400;700&family=Libre+Franklin:wght@300;400;600;700;900&family=IBM+Plex+Mono:wght@400;600&family=Sora:wght@400;600;800&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#0e0e10; color:#fff; font-family:'DM Sans',sans-serif; }
+
+  /* ---- NAV ---- */
+  .topnav {
+    position:sticky; top:0; z-index:100; background:rgba(14,14,16,.92); backdrop-filter:blur(12px);
+    border-bottom:1px solid #26262b; display:flex; flex-wrap:wrap; gap:6px; padding:14px 20px; align-items:center;
+  }
+  .topnav .lbl { font-family:'Space Mono',monospace; font-size:11px; letter-spacing:.15em; text-transform:uppercase; color:#7a7a85; margin-right:14px; }
+  .topnav button {
+    font-family:'Space Mono',monospace; font-size:12px; letter-spacing:.05em; background:#1c1c21; color:#c5c5cc;
+    border:1px solid #2e2e35; padding:8px 14px; border-radius:6px; cursor:pointer; transition:all .2s;
+  }
+  .topnav button:hover { background:#2a2a31; color:#fff; }
+  .topnav button.active { background:#fff; color:#0e0e10; border-color:#fff; }
+
+  .variant { display:none; }
+  .variant.show { display:block; }
+
+  .section-tag {
+    font-family:'Space Mono',monospace; font-size:11px; letter-spacing:.2em; text-transform:uppercase;
+    color:#7a7a85; padding:30px 20px 10px; max-width:1180px; margin:0 auto;
+  }
+
+  /* identity card frame */
+  .idcard-wrap { max-width:1180px; margin:0 auto; padding:0 20px 10px; }
+  .idcard { border-radius:16px; overflow:hidden; display:grid; grid-template-columns:1fr 1fr; min-height:340px; }
+  @media(max-width:760px){ .idcard{ grid-template-columns:1fr; } }
+  .idcard .logo-cell { display:flex; align-items:center; justify-content:center; padding:50px; }
+  .idcard .meta-cell { padding:40px; display:flex; flex-direction:column; justify-content:center; gap:18px; }
+  .swatches { display:flex; gap:10px; }
+  .swatch { width:38px; height:38px; border-radius:8px; border:1px solid rgba(255,255,255,.15); }
+  .meta-row { font-size:13px; line-height:1.5; }
+  .meta-row b { font-family:'Space Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; display:block; opacity:.55; margin-bottom:3px; }
+
+  /* landing frame */
+  .landing-wrap { max-width:1180px; margin:0 auto 50px; padding:0 20px; }
+  .landing { border-radius:16px; overflow:hidden; }
+
+  /* ============ V1 — CONTRA COSTA FOUNDATION (refined navy/stone, editorial) ============ */
+  .v1-id { background:#f4f1ea; color:#16243a; }
+  .v1-id .meta-cell { color:#16243a; }
+  .v1-logo { text-align:center; }
+  .v1-logo .mark { width:62px; height:62px; margin:0 auto 14px; position:relative; }
+  .v1-logo .mark svg { width:100%; height:100%; }
+  .v1-logo .name { font-family:'Fraunces',serif; font-weight:900; font-size:30px; letter-spacing:-.01em; line-height:.95; }
+  .v1-logo .sub { font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:10px; letter-spacing:.34em; text-transform:uppercase; margin-top:8px; color:#516079; }
+  .v1-land { background:#f4f1ea; color:#16243a; font-family:'Libre Franklin',sans-serif; }
+  .v1-land .nav { display:flex; justify-content:space-between; align-items:center; padding:24px 44px; border-bottom:1px solid #ddd5c5; }
+  .v1-land .nav .brand { font-family:'Fraunces',serif; font-weight:900; font-size:19px; }
+  .v1-land .nav .links { display:flex; gap:26px; font-size:13px; font-weight:600; }
+  .v1-land .nav .links span:last-child { background:#16243a; color:#f4f1ea; padding:9px 18px; border-radius:4px; }
+  .v1-land .hero { padding:78px 44px 60px; display:grid; grid-template-columns:1.2fr .8fr; gap:40px; align-items:end; }
+  @media(max-width:760px){ .v1-land .hero{ grid-template-columns:1fr; } }
+  .v1-land .hero .kick { font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:#8a6d3a; margin-bottom:22px; }
+  .v1-land .hero h1 { font-family:'Fraunces',serif; font-weight:900; font-size:62px; line-height:.96; letter-spacing:-.02em; }
+  .v1-land .hero h1 em { font-style:italic; color:#8a6d3a; }
+  .v1-land .hero p { font-size:16px; line-height:1.6; color:#3a4759; margin-top:22px; max-width:440px; }
+  .v1-land .hero .cta { margin-top:28px; display:flex; gap:14px; }
+  .v1-land .hero .cta a { font-size:13px; font-weight:700; padding:13px 24px; border-radius:4px; text-decoration:none; }
+  .v1-land .hero .cta .p { background:#16243a; color:#f4f1ea; }
+  .v1-land .hero .cta .s { border:1px solid #16243a; color:#16243a; }
+  .v1-land .hero .stat { border-left:2px solid #8a6d3a; padding-left:18px; }
+  .v1-land .hero .stat .n { font-family:'Fraunces',serif; font-weight:900; font-size:46px; line-height:1; }
+  .v1-land .hero .stat .l { font-size:12px; color:#3a4759; margin-top:6px; }
+  .v1-land .hero .stat + .stat { margin-top:24px; }
+  .v1-land .strip { background:#16243a; color:#cdd6e4; display:flex; justify-content:space-around; flex-wrap:wrap; gap:14px; padding:20px 44px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.08em; }
+  .v1-land .svcs { padding:54px 44px; display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:#ddd5c5; }
+  @media(max-width:760px){ .v1-land .svcs{ grid-template-columns:1fr; } }
+  .v1-land .svc { background:#f4f1ea; padding:30px; }
+  .v1-land .svc h3 { font-family:'Fraunces',serif; font-weight:700; font-size:22px; margin-bottom:8px; }
+  .v1-land .svc p { font-size:14px; line-height:1.55; color:#3a4759; }
+  .v1-land .svc .tag { font-family:'IBM Plex Mono',monospace; font-size:11px; color:#8a6d3a; letter-spacing:.1em; }
+
+  /* ============ V2 — EAST BAY FOUNDATION CO (industrial, dark, utilitarian) ============ */
+  .v2-id { background:#16181c; color:#f3b61f; border:1px solid #2a2d33; }
+  .v2-id .meta-cell { color:#e8e8ea; }
+  .v2-logo { text-align:left; }
+  .v2-logo .row { display:flex; align-items:center; gap:14px; }
+  .v2-logo .mark { width:54px; height:54px; flex-shrink:0; }
+  .v2-logo .name { font-family:'Archivo',sans-serif; font-weight:900; font-size:27px; line-height:.9; letter-spacing:-.02em; text-transform:uppercase; color:#fff; }
+  .v2-logo .name span { color:#f3b61f; }
+  .v2-logo .sub { font-family:'Space Mono',monospace; font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:#7d7f86; margin-top:14px; }
+  .v2-land { background:#16181c; color:#e8e8ea; font-family:'Archivo',sans-serif; }
+  .v2-land .nav { display:flex; justify-content:space-between; align-items:center; padding:22px 44px; border-bottom:1px solid #2a2d33; }
+  .v2-land .nav .brand { font-family:'Archivo',sans-serif; font-weight:900; font-size:18px; text-transform:uppercase; }
+  .v2-land .nav .brand span{ color:#f3b61f; }
+  .v2-land .nav .links { display:flex; gap:22px; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.05em; align-items:center; }
+  .v2-land .nav .links .b { background:#f3b61f; color:#16181c; padding:10px 16px; }
+  .v2-land .hero { padding:70px 44px; position:relative; overflow:hidden; }
+  .v2-land .hero::before { content:""; position:absolute; inset:0; background-image:repeating-linear-gradient(45deg,#1c1f24 0 18px,#16181c 18px 36px); opacity:.5; }
+  .v2-land .hero > * { position:relative; }
+  .v2-land .hero .kick { font-family:'Space Mono',monospace; font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#f3b61f; margin-bottom:18px; }
+  .v2-land .hero h1 { font-family:'Archivo',sans-serif; font-weight:900; font-size:74px; line-height:.88; text-transform:uppercase; letter-spacing:-.02em; max-width:840px; }
+  .v2-land .hero h1 span { -webkit-text-stroke:2px #f3b61f; color:transparent; }
+  .v2-land .hero p { font-size:16px; line-height:1.55; color:#a9abb2; margin-top:24px; max-width:480px; }
+  .v2-land .hero .cta { margin-top:30px; }
+  .v2-land .hero .cta a { font-family:'Space Mono',monospace; font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; padding:15px 28px; text-decoration:none; }
+  .v2-land .hero .cta .p { background:#f3b61f; color:#16181c; }
+  .v2-land .hero .cta .s { color:#fff; border:1px solid #3a3d44; margin-left:10px; }
+  .v2-land .svcs { display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid #2a2d33; }
+  @media(max-width:760px){ .v2-land .svcs{ grid-template-columns:repeat(2,1fr); } }
+  .v2-land .svc { padding:30px 24px; border-right:1px solid #2a2d33; }
+  .v2-land .svc .num { font-family:'Space Mono',monospace; font-size:11px; color:#f3b61f; }
+  .v2-land .svc h3 { font-family:'Archivo',sans-serif; font-weight:800; font-size:17px; text-transform:uppercase; margin:14px 0 8px; }
+  .v2-land .svc p { font-size:13px; line-height:1.5; color:#8c8e95; }
+
+  /* ============ V3 — DIABLO FOUNDATION (premium/refined, warm minimal, Mt Diablo nod) ============ */
+  .v3-id { background:#1a1714; color:#e7ddd0; }
+  .v3-id .meta-cell { color:#e7ddd0; }
+  .v3-logo { text-align:center; }
+  .v3-logo .mark { width:70px; height:70px; margin:0 auto 16px; }
+  .v3-logo .name { font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:32px; letter-spacing:-.02em; color:#fff; }
+  .v3-logo .sub { font-family:'Manrope',sans-serif; font-weight:700; font-size:10px; letter-spacing:.4em; text-transform:uppercase; color:#b08d57; margin-top:9px; }
+  .v3-land { background:#fbf8f3; color:#1a1714; font-family:'Manrope',sans-serif; }
+  .v3-land .nav { display:flex; justify-content:space-between; align-items:center; padding:26px 46px; }
+  .v3-land .nav .brand { font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:20px; letter-spacing:-.02em; }
+  .v3-land .nav .links { display:flex; gap:28px; font-size:13px; font-weight:700; align-items:center; }
+  .v3-land .nav .links .b { background:#b08d57; color:#fff; padding:10px 20px; border-radius:30px; }
+  .v3-land .hero { padding:50px 46px 70px; text-align:center; }
+  .v3-land .hero .kick { font-family:'Manrope',sans-serif; font-weight:700; font-size:12px; letter-spacing:.3em; text-transform:uppercase; color:#b08d57; margin-bottom:26px; }
+  .v3-land .hero h1 { font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:66px; line-height:.98; letter-spacing:-.03em; max-width:880px; margin:0 auto; }
+  .v3-land .hero p { font-size:17px; line-height:1.6; color:#5c544a; margin:26px auto 0; max-width:520px; }
+  .v3-land .hero .cta { margin-top:34px; }
+  .v3-land .hero .cta a { font-weight:700; font-size:14px; padding:15px 30px; border-radius:30px; text-decoration:none; }
+  .v3-land .hero .cta .p { background:#1a1714; color:#fbf8f3; }
+  .v3-land .hero .cta .s { color:#1a1714; margin-left:10px; }
+  .v3-land .ridge { height:70px; background:linear-gradient(180deg,#fbf8f3,#f1ebe1); position:relative; }
+  .v3-land .svcs { background:#f1ebe1; padding:60px 46px; display:grid; grid-template-columns:repeat(2,1fr); gap:34px; }
+  @media(max-width:760px){ .v3-land .svcs{ grid-template-columns:1fr; } }
+  .v3-land .svc { display:flex; gap:18px; }
+  .v3-land .svc .ic { width:46px; height:46px; border-radius:50%; background:#b08d57; flex-shrink:0; display:flex; align-items:center; justify-content:center; color:#fff; font-family:'Bricolage Grotesque',sans-serif; font-weight:800; }
+  .v3-land .svc h3 { font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:20px; margin-bottom:6px; }
+  .v3-land .svc p { font-size:14px; line-height:1.55; color:#5c544a; }
+
+  /* ============ V4 — 925 FOUNDATION (bold modern, area-code, confident teal/cream) ============ */
+  .v4-id { background:#0c3b3a; color:#f5f0e6; }
+  .v4-id .meta-cell { color:#f5f0e6; }
+  .v4-logo { text-align:center; }
+  .v4-logo .mark { display:inline-flex; align-items:center; gap:0; }
+  .v4-logo .badge { font-family:'Sora',sans-serif; font-weight:800; font-size:46px; background:#f0a830; color:#0c3b3a; padding:6px 16px; border-radius:12px; letter-spacing:-.03em; }
+  .v4-logo .name { font-family:'Sora',sans-serif; font-weight:800; font-size:22px; letter-spacing:.02em; text-transform:uppercase; margin-top:16px; }
+  .v4-logo .sub { font-family:'Space Mono',monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:#7fb0ae; margin-top:8px; }
+  .v4-land { background:#0c3b3a; color:#f5f0e6; font-family:'Sora',sans-serif; }
+  .v4-land .nav { display:flex; justify-content:space-between; align-items:center; padding:24px 46px; }
+  .v4-land .nav .brand { font-family:'Sora',sans-serif; font-weight:800; font-size:18px; }
+  .v4-land .nav .brand b { background:#f0a830; color:#0c3b3a; padding:2px 8px; border-radius:6px; }
+  .v4-land .nav .links { display:flex; gap:24px; font-size:13px; font-weight:600; align-items:center; }
+  .v4-land .nav .links .b { background:#f5f0e6; color:#0c3b3a; padding:10px 18px; border-radius:8px; font-weight:800; }
+  .v4-land .hero { padding:64px 46px 70px; display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:center; }
+  @media(max-width:760px){ .v4-land .hero{ grid-template-columns:1fr; } }
+  .v4-land .hero .kick { font-family:'Space Mono',monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#f0a830; margin-bottom:20px; }
+  .v4-land .hero h1 { font-family:'Sora',sans-serif; font-weight:800; font-size:60px; line-height:.98; letter-spacing:-.03em; }
+  .v4-land .hero h1 b { color:#f0a830; }
+  .v4-land .hero p { font-size:16px; line-height:1.6; color:#bcd4d2; margin-top:22px; max-width:420px; }
+  .v4-land .hero .cta { margin-top:28px; display:flex; gap:12px; }
+  .v4-land .hero .cta a { font-size:13px; font-weight:800; padding:14px 24px; border-radius:8px; text-decoration:none; }
+  .v4-land .hero .cta .p { background:#f0a830; color:#0c3b3a; }
+  .v4-land .hero .cta .s { border:1px solid #2f5d5b; color:#f5f0e6; }
+  .v4-land .hero .panel { background:#0a2f2e; border-radius:18px; padding:34px; }
+  .v4-land .hero .panel .pr { display:flex; justify-content:space-between; padding:16px 0; border-bottom:1px solid #1c4544; font-size:14px; }
+  .v4-land .hero .panel .pr:last-child { border:0; }
+  .v4-land .hero .panel .pr b { color:#f0a830; font-family:'Space Mono',monospace; }
+  .v4-land .svcs { background:#f5f0e6; color:#0c3b3a; padding:50px 46px; display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+  @media(max-width:760px){ .v4-land .svcs{ grid-template-columns:repeat(2,1fr); } }
+  .v4-land .svc h3 { font-family:'Sora',sans-serif; font-weight:800; font-size:16px; margin-bottom:7px; }
+  .v4-land .svc p { font-size:13px; line-height:1.5; color:#4a6b69; }
+  .v4-land .svc .dot { width:10px; height:10px; border-radius:50%; background:#f0a830; margin-bottom:14px; }
+
+  /* ============ V5 — BAYROCK FOUNDATIONS (editorial/serif, slate + rust, trustworthy) ============ */
+  .v5-id { background:#ece9e4; color:#2b2723; }
+  .v5-id .meta-cell { color:#2b2723; }
+  .v5-logo { text-align:center; }
+  .v5-logo .mark { width:58px; height:58px; margin:0 auto 14px; }
+  .v5-logo .name { font-family:'Instrument Serif',serif; font-size:40px; line-height:.9; letter-spacing:0; }
+  .v5-logo .sub { font-family:'Archivo',sans-serif; font-weight:700; font-size:10px; letter-spacing:.32em; text-transform:uppercase; color:#9c4a2f; margin-top:6px; }
+  .v5-land { background:#ece9e4; color:#2b2723; font-family:'Archivo',sans-serif; }
+  .v5-land .nav { display:flex; justify-content:space-between; align-items:center; padding:24px 46px; border-bottom:1px solid #d3cec5; }
+  .v5-land .nav .brand { font-family:'Instrument Serif',serif; font-size:26px; }
+  .v5-land .nav .links { display:flex; gap:26px; font-size:13px; font-weight:600; align-items:center; }
+  .v5-land .nav .links .b { background:#9c4a2f; color:#ece9e4; padding:10px 18px; }
+  .v5-land .hero { padding:72px 46px; display:grid; grid-template-columns:1.1fr .9fr; gap:50px; }
+  @media(max-width:760px){ .v5-land .hero{ grid-template-columns:1fr; } }
+  .v5-land .hero .kick { font-family:'Archivo',sans-serif; font-weight:700; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:#9c4a2f; margin-bottom:22px; }
+  .v5-land .hero h1 { font-family:'Instrument Serif',serif; font-size:70px; line-height:.94; letter-spacing:-.01em; }
+  .v5-land .hero h1 em { color:#9c4a2f; }
+  .v5-land .hero p { font-size:16px; line-height:1.6; color:#5a544c; margin-top:24px; max-width:440px; }
+  .v5-land .hero .cta { margin-top:30px; display:flex; gap:14px; }
+  .v5-land .hero .cta a { font-size:13px; font-weight:700; padding:14px 26px; text-decoration:none; }
+  .v5-land .hero .cta .p { background:#2b2723; color:#ece9e4; }
+  .v5-land .hero .cta .s { border:1px solid #2b2723; color:#2b2723; }
+  .v5-land .hero .quote { border-top:2px solid #2b2723; padding-top:22px; }
+  .v5-land .hero .quote p { font-family:'Instrument Serif',serif; font-style:italic; font-size:24px; line-height:1.3; color:#2b2723; margin:0; }
+  .v5-land .hero .quote .by { font-family:'Archivo',sans-serif; font-size:12px; font-weight:600; color:#9c4a2f; margin-top:14px; text-transform:uppercase; letter-spacing:.1em; }
+  .v5-land .svcs { border-top:1px solid #d3cec5; display:grid; grid-template-columns:repeat(4,1fr); }
+  @media(max-width:760px){ .v5-land .svcs{ grid-template-columns:repeat(2,1fr); } }
+  .v5-land .svc { padding:34px 26px; border-right:1px solid #d3cec5; }
+  .v5-land .svc .n { font-family:'Instrument Serif',serif; font-size:34px; color:#9c4a2f; }
+  .v5-land .svc h3 { font-family:'Archivo',sans-serif; font-weight:800; font-size:15px; text-transform:uppercase; letter-spacing:.03em; margin:10px 0 7px; }
+  .v5-land .svc p { font-size:13px; line-height:1.5; color:#5a544c; }
+
+  /* ============ RESEARCH PAGE (00) ============ */
+  .rsch { max-width:1100px; margin:0 auto; padding:46px 24px 70px; }
+  .rsch .eyebrow { font-family:'Space Mono',monospace; font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:#f3b61f; margin-bottom:18px; }
+  .rsch h1 { font-family:'Sora',sans-serif; font-weight:800; font-size:42px; line-height:1.04; letter-spacing:-.02em; max-width:780px; }
+  .rsch .lede { font-size:17px; line-height:1.6; color:#b6b6bf; margin-top:20px; max-width:720px; }
+  .rsch h2 { font-family:'Sora',sans-serif; font-weight:800; font-size:13px; letter-spacing:.16em; text-transform:uppercase; color:#7fb0ae; margin:52px 0 18px; padding-bottom:12px; border-bottom:1px solid #26262b; }
+  .rsch p.body { font-size:15px; line-height:1.7; color:#cfcfd6; max-width:760px; margin-bottom:16px; }
+  .rsch p.body b { color:#fff; }
+
+  /* competitor logo chips */
+  .complogos { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:8px 0 6px; }
+  @media(max-width:760px){ .complogos{ grid-template-columns:1fr 1fr; } }
+  .clogo { border-radius:12px; padding:22px 20px; min-height:118px; display:flex; flex-direction:column; justify-content:space-between; border:1px solid rgba(255,255,255,.08); }
+  .clogo .lname { font-size:18px; line-height:1.05; font-weight:800; }
+  .clogo .ltag { font-size:11px; opacity:.8; margin-top:6px; }
+  .clogo .lnote { font-family:'Space Mono',monospace; font-size:10px; letter-spacing:.04em; margin-top:14px; opacity:.85; }
+  /* each styled to evoke the real brand */
+  .cl-golden { background:linear-gradient(135deg,#0a2a4f,#103a6b); color:#f5c443; }
+  .cl-golden .lname { font-family:'Libre Franklin',sans-serif; }
+  .cl-mares { background:#f3f1ec; color:#1c3d2e; }
+  .cl-mares .lname { font-family:'Fraunces',serif; font-weight:900; }
+  .cl-ramjack { background:#b8232f; color:#fff; }
+  .cl-ramjack .lname { font-family:'Archivo',sans-serif; text-transform:uppercase; letter-spacing:-.01em; }
+  .cl-ground { background:#0e3d2a; color:#7ed957; }
+  .cl-ground .lname { font-family:'Sora',sans-serif; }
+  .cl-gsbuild { background:#1d2530; color:#e8a13a; }
+  .cl-gsbuild .lname { font-family:'Archivo',sans-serif; }
+  .cl-bolt { background:#14202e; color:#39b6e8; }
+  .cl-bolt .lname { font-family:'Space Mono',monospace; font-weight:700; }
+  .clbadge { font-family:'Space Mono',monospace; font-size:9px; letter-spacing:.1em; text-transform:uppercase; opacity:.6; }
+
+  /* two-col table-ish blocks */
+  .rgrid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media(max-width:760px){ .rgrid{ grid-template-columns:1fr; } }
+  .rcard { background:#17171b; border:1px solid #26262b; border-radius:12px; padding:24px; }
+  .rcard h3 { font-family:'Sora',sans-serif; font-weight:800; font-size:16px; margin-bottom:12px; }
+  .rcard .gap { color:#f3b61f; }
+  .rcard .opp { color:#7ed957; }
+  .rcard ul { list-style:none; }
+  .rcard li { font-size:14px; line-height:1.5; color:#cfcfd6; padding-left:18px; position:relative; margin-bottom:10px; }
+  .rcard li::before { content:"→"; position:absolute; left:0; color:#5e5e68; }
+  .statband { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:6px 0; }
+  @media(max-width:760px){ .statband{ grid-template-columns:1fr 1fr; } }
+  .statbox { background:#17171b; border:1px solid #26262b; border-radius:12px; padding:22px; }
+  .statbox .n { font-family:'Sora',sans-serif; font-weight:800; font-size:34px; color:#fff; line-height:1; }
+  .statbox .l { font-size:12px; color:#9a9aa3; margin-top:8px; line-height:1.4; }
+  .takeaway { background:linear-gradient(135deg,#13322f,#0c3b3a); border:1px solid #2f5d5b; border-radius:14px; padding:30px; margin-top:18px; }
+  .takeaway h3 { font-family:'Sora',sans-serif; font-weight:800; font-size:18px; color:#f0a830; margin-bottom:12px; }
+  .takeaway p { font-size:15px; line-height:1.65; color:#dbe7e6; }
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <span class="lbl">New Foundation Venture · East Bay · Research + 5 Brand Directions</span>
+  <button class="nav-btn active" data-v="0">00 / Competitive Research</button>
+  <button class="nav-btn" data-v="1">01 / Contra Costa Foundation</button>
+  <button class="nav-btn" data-v="2">02 / East Bay Foundation Co.</button>
+  <button class="nav-btn" data-v="3">03 / Diablo Foundation</button>
+  <button class="nav-btn" data-v="4">04 / 925 Foundation</button>
+  <button class="nav-btn" data-v="5">05 / Bayrock Foundations</button>
+</div>
+
+<!-- ============ RESEARCH PAGE (00) ============ -->
+<div class="variant show" id="v-0">
+  <div class="rsch">
+    <div class="eyebrow">Competitive Research · Walnut Creek & East Bay</div>
+    <h1>The market is crowded on repair — and wide open on new construction.</h1>
+    <p class="lede">Every foundation company in the East Bay was built around repair. None of them explicitly own new-construction foundation work, and none anchor their brand to a single, defensible local identity. That gap is the opening for this new venture.</p>
+
+    <h2>The competitors we're up against</h2>
+    <div class="complogos">
+      <div class="clogo cl-golden">
+        <div><div class="lname">Golden Bay<br>Foundation Builders</div><div class="ltag">Walnut Creek · the local incumbent</div></div>
+        <div class="lnote">10 yrs · BBB A · Lic #1112835 · 60+ jobs/2yr</div>
+      </div>
+      <div class="clogo cl-mares">
+        <div><div class="lname">Mares &amp; Dow</div><div class="ltag">Concord · established generalist</div></div>
+        <div class="lnote">Referral-led · GC, not specialist</div>
+      </div>
+      <div class="clogo cl-ramjack">
+        <div><div class="lname">Ram Jack /<br>Foundation Solutions</div><div class="ltag">National-backed specialist</div></div>
+        <div class="lnote">25 yrs · helical piers · push piers</div>
+      </div>
+      <div class="clogo cl-ground">
+        <div><div class="lname">Groundworks CA</div><div class="ltag">Enterprise operator</div></div>
+        <div class="lnote">Big · corporate · zero local warmth</div>
+      </div>
+      <div class="clogo cl-gsbuild">
+        <div><div class="lname">GS Builders<br>Group</div><div class="ltag">Rising · transparency angle</div></div>
+        <div class="lnote">Newer · same positioning as Golden Bay</div>
+      </div>
+      <div class="clogo cl-bolt">
+        <div><div class="lname">Bolt Down /<br>East Bay Retrofit</div><div class="ltag">Seismic-only specialists</div></div>
+        <div class="lnote">4.9★ · 156 reviews · EBB-grant focused</div>
+      </div>
+    </div>
+    <p class="body" style="margin-top:16px"><b>Read:</b> Golden Bay is the brand to beat locally — visible, well-reviewed, full-service. But it's repair-first, like everyone else. The national players (Ram Jack, Groundworks) win on scale and lose on local warmth. The seismic specialists own one narrow lane. Nobody is the obvious answer for <b>"who pours my new foundation?"</b></p>
+
+    <h2>The numbers behind the opportunity</h2>
+    <div class="statband">
+      <div class="statbox"><div class="n">2,155</div><div class="l">New housing units permitted in Contra Costa County (2024) — up 3 straight years</div></div>
+      <div class="statbox"><div class="n">~500+</div><div class="l">Est. new units/yr in the core WC + ring service area</div></div>
+      <div class="statbox"><div class="n">$129K</div><div class="l">Walnut Creek ADU rebate pool — fully claimed by mid-2025</div></div>
+      <div class="statbox"><div class="n">$1–1.5M</div><div class="l">Est. annual new-construction foundation revenue at maturity</div></div>
+    </div>
+    <p class="body" style="margin-top:16px">New construction breaks into three jobs: <b>custom home foundations</b> ($30K–80K, low volume / high margin), <b>ADU foundations</b> ($5K–25K, the volume engine — demand is policy-driven and durable), and <b>additions on new foundations</b> ($8K–20K, steady middle market). ADUs carry the volume; custom homes carry the margin.</p>
+
+    <h2>Gaps in the market = our openings</h2>
+    <div class="rgrid">
+      <div class="rcard">
+        <h3 class="gap">What competitors miss</h3>
+        <ul>
+          <li>No one owns "new construction foundation" in their brand or messaging</li>
+          <li>Sites look generic and template-built</li>
+          <li>Repair-only focus leaves the B2B builder channel underworked</li>
+          <li>National players are cold and corporate; locals are unpolished</li>
+          <li>Thin educational content (inspections, buying a home with foundation issues)</li>
+        </ul>
+      </div>
+      <div class="rcard">
+        <h3 class="opp">How the new venture wins</h3>
+        <ul>
+          <li>Lead as the specialist that does both repair <b>and</b> new build</li>
+          <li>Clean, professional brand that stands out instantly</li>
+          <li>Subcontract new foundations to GCs &amp; custom-home builders</li>
+          <li>Own local warmth + owner-operated story against the nationals</li>
+          <li>Capture ADU demand with rebate-aware, permit-handled service</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Strategic takeaway</h2>
+    <div class="takeaway">
+      <h3>Position as the foundation specialist, not the generalist.</h3>
+      <p>Every competitor is a general contractor who happens to do foundations. The new venture should be the company that <b>only</b> does foundations — repair and new construction — anchored to a defensible East Bay identity. Repair is the safe near-term revenue; new construction is the differentiated story nobody else is telling. The five brand directions that follow each express that positioning a different way.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ VARIANT 1 ============ -->
+<div class="variant" id="v-1">
+  <div class="section-tag">↳ Identity card — refined editorial · navy + stone + brass · Fraunces serif</div>
+  <div class="idcard-wrap"><div class="idcard v1-id">
+    <div class="logo-cell">
+      <div class="v1-logo">
+        <div class="mark">
+          <svg viewBox="0 0 60 60" fill="none">
+            <rect x="6" y="34" width="48" height="8" fill="#16243a"/>
+            <rect x="6" y="44" width="48" height="6" fill="#8a6d3a"/>
+            <path d="M30 8 L50 30 H10 Z" fill="#16243a"/>
+            <path d="M30 18 L40 30 H20 Z" fill="#8a6d3a"/>
+          </svg>
+        </div>
+        <div class="name">Contra Costa<br>Foundation</div>
+        <div class="sub">Repair · Build · Stabilize</div>
+      </div>
+    </div>
+    <div class="meta-cell">
+      <div class="swatches">
+        <div class="swatch" style="background:#16243a"></div>
+        <div class="swatch" style="background:#8a6d3a"></div>
+        <div class="swatch" style="background:#f4f1ea"></div>
+        <div class="swatch" style="background:#516079"></div>
+      </div>
+      <div class="meta-row"><b>Typeface</b>Fraunces (display) · Libre Franklin (body)</div>
+      <div class="meta-row"><b>Voice</b>Established, county-rooted, the trusted name. Owns the place.</div>
+      <div class="meta-row"><b>Best for</b>Premium positioning, agent referrals, SEO authority on "Contra Costa."</div>
+    </div>
+  </div></div>
+
+  <div class="section-tag">↳ Landing page</div>
+  <div class="landing-wrap"><div class="landing v1-land">
+    <div class="nav">
+      <div class="brand">Contra Costa Foundation</div>
+      <div class="links"><span>Repair</span><span>New Construction</span><span>Seismic</span><span>Free Inspection</span></div>
+    </div>
+    <div class="hero">
+      <div>
+        <div class="kick">Serving Walnut Creek & the East Bay since day one</div>
+        <h1>The county's foundation, <em>repaired and rebuilt.</em></h1>
+        <p>One specialist for both ends of the job — stabilizing the home you have, and pouring the foundation for the one you're building. Engineering-backed. Permit-handled. Warrantied.</p>
+        <div class="cta"><a class="p" href="#">Book free inspection</a><a class="s" href="#">See our work</a></div>
+      </div>
+      <div>
+        <div class="stat"><div class="n">25+</div><div class="l">Years of East Bay soil & seismic experience</div></div>
+        <div class="stat"><div class="n">2</div><div class="l">Specialties under one roof: repair + new build</div></div>
+      </div>
+    </div>
+    <div class="strip"><span>PUSH & HELICAL PIERS</span><span>NEW HOME FOUNDATIONS</span><span>ADU SLABS</span><span>SEISMIC RETROFIT</span><span>LICENSED & BONDED</span></div>
+    <div class="svcs">
+      <div class="svc"><div class="tag">REPAIR</div><h3>Foundation Repair</h3><p>Settlement, cracks, uneven floors. Push and helical pier underpinning for clay and hillside lots.</p></div>
+      <div class="svc"><div class="tag">NEW BUILD</div><h3>New Construction</h3><p>Slabs and stem walls for custom homes, additions, and ADUs — engineered for your site.</p></div>
+      <div class="svc"><div class="tag">SEISMIC</div><h3>Earthquake Retrofit</h3><p>EBB-program eligible bolt-downs and soft-story reinforcement across the fault zone.</p></div>
+      <div class="svc"><div class="tag">DRAINAGE</div><h3>Crawl Space & Drainage</h3><p>Encapsulation and water management that protects the foundation for the long haul.</p></div>
+    </div>
+  </div></div>
+</div>
+
+<!-- ============ VARIANT 2 ============ -->
+<div class="variant" id="v-2">
+  <div class="section-tag">↳ Identity card — industrial/utilitarian · graphite + safety amber · Archivo black</div>
+  <div class="idcard-wrap"><div class="idcard v2-id">
+    <div class="logo-cell">
+      <div class="v2-logo">
+        <div class="row">
+          <div class="mark">
+            <svg viewBox="0 0 54 54" fill="none">
+              <rect x="3" y="3" width="48" height="48" rx="6" fill="#f3b61f"/>
+              <rect x="12" y="30" width="30" height="6" fill="#16181c"/>
+              <rect x="12" y="38" width="30" height="4" fill="#16181c"/>
+              <path d="M16 30 L16 18 L27 12 L38 18 L38 30" stroke="#16181c" stroke-width="4" fill="none"/>
+            </svg>
+          </div>
+          <div class="name">East Bay<br><span>Foundation</span> Co.</div>
+        </div>
+        <div class="sub">// Repair + New Construction</div>
+      </div>
+    </div>
+    <div class="meta-cell">
+      <div class="swatches">
+        <div class="swatch" style="background:#16181c"></div>
+        <div class="swatch" style="background:#f3b61f"></div>
+        <div class="swatch" style="background:#2a2d33"></div>
+        <div class="swatch" style="background:#e8e8ea"></div>
+      </div>
+      <div class="meta-row"><b>Typeface</b>Archivo Black (display) · Space Mono (detail)</div>
+      <div class="meta-row"><b>Voice</b>No-nonsense, blue-collar credibility, "we actually do the work."</div>
+      <div class="meta-row"><b>Best for</b>GC/builder B2B trust, contractor-to-contractor referrals.</div>
+    </div>
+  </div></div>
+
+  <div class="section-tag">↳ Landing page</div>
+  <div class="landing-wrap"><div class="landing v2-land">
+    <div class="nav">
+      <div class="brand">EAST BAY <span>FOUNDATION</span> CO.</div>
+      <div class="links"><span>SERVICES</span><span>PROJECTS</span><span>FOR BUILDERS</span><span class="b">GET A QUOTE</span></div>
+    </div>
+    <div class="hero">
+      <div class="kick">// Walnut Creek · Concord · Lafayette · Danville · San Ramon</div>
+      <h1>WE FIX FOUNDATIONS.<br>AND WE <span>POUR NEW ONES.</span></h1>
+      <p>The only crew in the East Bay you call for both — underpinning a sinking house and laying the slab for a brand-new build. Engineered, permitted, done right the first time.</p>
+      <div class="cta"><a class="p" href="#">REQUEST QUOTE</a><a class="s" href="#">CALL (925) 555-0100</a></div>
+    </div>
+    <div class="svcs">
+      <div class="svc"><div class="num">01</div><h3>Repair</h3><p>Push piers, helical piers, slab jacking. Settlement and crack remediation.</p></div>
+      <div class="svc"><div class="num">02</div><h3>New Foundations</h3><p>Slabs & stem walls for new homes, additions, garages.</p></div>
+      <div class="svc"><div class="num">03</div><h3>ADU Pours</h3><p>Backyard-unit foundations, permit-ready, rebate-aware.</p></div>
+      <div class="svc"><div class="num">04</div><h3>Seismic</h3><p>Brace & bolt retrofits. EBB grant eligible.</p></div>
+    </div>
+  </div></div>
+</div>
+
+<!-- ============ VARIANT 3 ============ -->
+<div class="variant" id="v-3">
+  <div class="section-tag">↳ Identity card — premium/refined · espresso + bronze + cream · Bricolage Grotesque</div>
+  <div class="idcard-wrap"><div class="idcard v3-id">
+    <div class="logo-cell">
+      <div class="v3-logo">
+        <div class="mark">
+          <svg viewBox="0 0 70 70" fill="none">
+            <circle cx="35" cy="35" r="33" stroke="#b08d57" stroke-width="2"/>
+            <path d="M16 46 L35 20 L54 46" stroke="#b08d57" stroke-width="3" fill="none"/>
+            <path d="M26 46 L35 33 L44 46" fill="#e7ddd0"/>
+            <rect x="16" y="48" width="38" height="3" fill="#b08d57"/>
+          </svg>
+        </div>
+        <div class="name">Diablo Foundation</div>
+        <div class="sub">East Bay</div>
+      </div>
+    </div>
+    <div class="meta-cell">
+      <div class="swatches">
+        <div class="swatch" style="background:#1a1714"></div>
+        <div class="swatch" style="background:#b08d57"></div>
+        <div class="swatch" style="background:#fbf8f3"></div>
+        <div class="swatch" style="background:#5c544a"></div>
+      </div>
+      <div class="meta-row"><b>Typeface</b>Bricolage Grotesque (display) · Manrope (body)</div>
+      <div class="meta-row"><b>Voice</b>Aspirational, design-forward, "the premium choice." Named for Mt. Diablo.</div>
+      <div class="meta-row"><b>Best for</b>High-end custom homes, architects, $2M+ Walnut Creek builds.</div>
+    </div>
+  </div></div>
+
+  <div class="section-tag">↳ Landing page</div>
+  <div class="landing-wrap"><div class="landing v3-land">
+    <div class="nav">
+      <div class="brand">Diablo Foundation</div>
+      <div class="links"><span>Repair</span><span>Build</span><span>Portfolio</span><span class="b">Consultation</span></div>
+    </div>
+    <div class="hero">
+      <div class="kick">Foundation specialists · East Bay</div>
+      <h1>Built on the same ground you are.</h1>
+      <p>From stabilizing a century-old hillside home to pouring the foundation of a brand-new custom build — Diablo brings engineering precision and craft to the work beneath everything.</p>
+      <div class="cta"><a class="p" href="#">Request consultation</a><a class="s" href="#">View portfolio →</a></div>
+    </div>
+    <div class="ridge"></div>
+    <div class="svcs">
+      <div class="svc"><div class="ic">R</div><div><h3>Foundation Repair</h3><p>Precision underpinning for settlement and seismic damage on expansive clay and sloped lots.</p></div></div>
+      <div class="svc"><div class="ic">N</div><div><h3>New Construction</h3><p>Engineered slabs and stem walls for custom homes built to last on demanding East Bay terrain.</p></div></div>
+      <div class="svc"><div class="ic">A</div><div><h3>ADU Foundations</h3><p>Backyard residences poured to spec — handling rebate programs and permitting end to end.</p></div></div>
+      <div class="svc"><div class="ic">S</div><div><h3>Seismic Retrofit</h3><p>Discreet, code-current reinforcement that protects both the structure and its value.</p></div></div>
+    </div>
+  </div></div>
+</div>
+
+<!-- ============ VARIANT 4 ============ -->
+<div class="variant" id="v-4">
+  <div class="section-tag">↳ Identity card — bold modern · deep teal + marigold · Sora · area-code hook</div>
+  <div class="idcard-wrap"><div class="idcard v4-id">
+    <div class="logo-cell">
+      <div class="v4-logo">
+        <div class="mark"><span class="badge">925</span></div>
+        <div class="name">Foundation</div>
+        <div class="sub">The East Bay's Foundation Specialist</div>
+      </div>
+    </div>
+    <div class="meta-cell">
+      <div class="swatches">
+        <div class="swatch" style="background:#0c3b3a"></div>
+        <div class="swatch" style="background:#f0a830"></div>
+        <div class="swatch" style="background:#f5f0e6"></div>
+        <div class="swatch" style="background:#7fb0ae"></div>
+      </div>
+      <div class="meta-row"><b>Typeface</b>Sora (display) · Space Mono (detail)</div>
+      <div class="meta-row"><b>Voice</b>Local-savvy, modern, memorable. The 925 area code = instant locality.</div>
+      <div class="meta-row"><b>Best for</b>Word-of-mouth recall, homeowner direct, strong brandable name.</div>
+    </div>
+  </div></div>
+
+  <div class="section-tag">↳ Landing page</div>
+  <div class="landing-wrap"><div class="landing v4-land">
+    <div class="nav">
+      <div class="brand"><b>925</b> Foundation</div>
+      <div class="links"><span>Repair</span><span>New Build</span><span>ADUs</span><span class="b">Free Estimate</span></div>
+    </div>
+    <div class="hero">
+      <div>
+        <div class="kick">Born in the 925 · built for the East Bay</div>
+        <h1>Repair it. Or <b>build it new.</b></h1>
+        <p>Two jobs, one specialist crew. We stabilize sinking foundations and pour new ones for homes, additions, and ADUs across the 925.</p>
+        <div class="cta"><a class="p" href="#">Get free estimate</a><a class="s" href="#">How it works</a></div>
+      </div>
+      <div class="panel">
+        <div class="pr"><span>Foundation inspection</span><b>FREE</b></div>
+        <div class="pr"><span>Repair · pier underpinning</span><b>$8K–40K</b></div>
+        <div class="pr"><span>New home foundation</span><b>$30K–80K</b></div>
+        <div class="pr"><span>ADU slab</span><b>$5K–25K</b></div>
+        <div class="pr"><span>Seismic retrofit (EBB)</span><b>GRANT ELIGIBLE</b></div>
+      </div>
+    </div>
+    <div class="svcs">
+      <div class="svc"><div class="dot"></div><h3>Foundation Repair</h3><p>Piers, slab jacking, crack repair for settling homes.</p></div>
+      <div class="svc"><div class="dot"></div><h3>New Construction</h3><p>Slabs & stem walls, engineered per site.</p></div>
+      <div class="svc"><div class="dot"></div><h3>ADU Foundations</h3><p>Rebate-aware backyard-unit pours.</p></div>
+      <div class="svc"><div class="dot"></div><h3>Seismic Retrofit</h3><p>Brace & bolt, EBB grant eligible.</p></div>
+    </div>
+  </div></div>
+</div>
+
+<!-- ============ VARIANT 5 ============ -->
+<div class="variant" id="v-5">
+  <div class="section-tag">↳ Identity card — editorial/trustworthy · warm slate + rust · Instrument Serif</div>
+  <div class="idcard-wrap"><div class="idcard v5-id">
+    <div class="logo-cell">
+      <div class="v5-logo">
+        <div class="mark">
+          <svg viewBox="0 0 58 58" fill="none">
+            <rect x="8" y="36" width="42" height="7" fill="#2b2723"/>
+            <rect x="8" y="45" width="42" height="4" fill="#9c4a2f"/>
+            <path d="M14 36 V20 H44 V36" stroke="#2b2723" stroke-width="3" fill="none"/>
+            <circle cx="29" cy="27" r="6" fill="#9c4a2f"/>
+          </svg>
+        </div>
+        <div class="name">Bayrock</div>
+        <div class="sub">Foundations · East Bay</div>
+      </div>
+    </div>
+    <div class="meta-cell">
+      <div class="swatches">
+        <div class="swatch" style="background:#2b2723"></div>
+        <div class="swatch" style="background:#9c4a2f"></div>
+        <div class="swatch" style="background:#ece9e4"></div>
+        <div class="swatch" style="background:#5a544c"></div>
+      </div>
+      <div class="meta-row"><b>Typeface</b>Instrument Serif (display) · Archivo (body)</div>
+      <div class="meta-row"><b>Voice</b>Solid, dependable, a touch of heritage. "Rock" = stability built in.</div>
+      <div class="meta-row"><b>Best for</b>Trust-led homeowner marketing; brandable & trademarkable beyond geo.</div>
+    </div>
+  </div></div>
+
+  <div class="section-tag">↳ Landing page</div>
+  <div class="landing-wrap"><div class="landing v5-land">
+    <div class="nav">
+      <div class="brand">Bayrock</div>
+      <div class="links"><span>Repair</span><span>New Construction</span><span>About</span><span class="b">Free Inspection</span></div>
+    </div>
+    <div class="hero">
+      <div>
+        <div class="kick">Foundation specialists · Walnut Creek & the East Bay</div>
+        <h1>Solid ground, <em>both ways.</em></h1>
+        <p>Whether your home is settling or you're breaking ground on a new one, Bayrock does the foundation work — and only the foundation work. That focus is why builders and homeowners trust us with what holds everything up.</p>
+        <div class="cta"><a class="p" href="#">Book free inspection</a><a class="s" href="#">Our process</a></div>
+      </div>
+      <div class="quote">
+        <p>"We don't dabble in everything. We do foundations — repair and new build — and we do them better than the generalists."</p>
+        <div class="by">— The Bayrock promise</div>
+      </div>
+    </div>
+    <div class="svcs">
+      <div class="svc"><div class="n">01</div><h3>Foundation Repair</h3><p>Underpinning and stabilization for settlement, cracks, and movement.</p></div>
+      <div class="svc"><div class="n">02</div><h3>New Construction</h3><p>Slabs and stem walls for homes, additions, and ADUs.</p></div>
+      <div class="svc"><div class="n">03</div><h3>Seismic Retrofit</h3><p>Brace & bolt and soft-story work, EBB grant eligible.</p></div>
+      <div class="svc"><div class="n">04</div><h3>Crawl & Drainage</h3><p>Encapsulation and water management to protect the foundation.</p></div>
+    </div>
+  </div></div>
+</div>
+
+<script>
+  const btns = document.querySelectorAll('.nav-btn');
+  const vars = document.querySelectorAll('.variant');
+  btns.forEach(b => b.addEventListener('click', () => {
+    btns.forEach(x => x.classList.remove('active'));
+    vars.forEach(x => x.classList.remove('show'));
+    b.classList.add('active');
+    document.getElementById('v-' + b.dataset.v).classList.add('show');
+    window.scrollTo({top:0, behavior:'smooth'});
+  }));
+</script>
+</body>
+</html>
