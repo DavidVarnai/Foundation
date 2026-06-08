@@ -259,6 +259,28 @@
   .takeaway h3 { font-family:'Sora',sans-serif; font-weight:800; font-size:18px; color:#f0a830; margin-bottom:12px; }
   .takeaway p { font-size:15px; line-height:1.65; color:#dbe7e6; }
 
+  /* revenue model table */
+  .modeltable { width:100%; border-collapse:collapse; margin:6px 0; font-size:13.5px; }
+  .modeltable th { text-align:left; font-family:'Space Mono',monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:#7a7a85; padding:10px 12px; border-bottom:1px solid #2e2e35; }
+  .modeltable th.num, .modeltable td.num { text-align:right; font-variant-numeric:tabular-nums; }
+  .modeltable td { padding:13px 12px; border-bottom:1px solid #1f1f24; color:#cfcfd6; }
+  .modeltable td .seg { color:#fff; font-weight:500; }
+  .modeltable td .sub { font-size:11px; color:#8c8e95; }
+  .modeltable .pill { font-family:'Space Mono',monospace; font-size:9px; letter-spacing:.08em; padding:3px 8px; border-radius:5px; }
+  .pill-core { background:rgba(126,217,87,.12); color:#7ed957; }
+  .pill-growth { background:rgba(240,168,48,.14); color:#f0a830; }
+  .pill-upside { background:rgba(57,182,232,.12); color:#39b6e8; }
+  .modeltable tr.totalrow td { border-top:2px solid #2e2e35; border-bottom:none; color:#fff; font-weight:700; font-size:15px; padding-top:16px; }
+  .modeltable td.y3 { color:#f0a830; font-weight:600; }
+  .modeltable tr.totalrow td.y3 { color:#f0a830; }
+  .mixbar { display:flex; height:34px; border-radius:8px; overflow:hidden; margin:8px 0 4px; }
+  .mixbar .seg-core { background:#2f7d3f; }
+  .mixbar .seg-growth { background:#c47f1a; }
+  .mixbar .seg-upside { background:#2a7da0; }
+  .mixbar div { display:flex; align-items:center; justify-content:center; font-family:'Space Mono',monospace; font-size:11px; color:#fff; font-weight:700; }
+  .mixlegend { display:flex; gap:18px; font-size:12px; color:#9a9aa3; flex-wrap:wrap; }
+  .mixlegend span b { color:#fff; }
+
   /* competitor profile cards */
   .profiles { display:flex; flex-direction:column; gap:12px; }
   .profile { background:#17171b; border:1px solid #26262b; border-radius:12px; padding:24px; display:grid; grid-template-columns:160px 1fr; gap:24px; align-items:start; }
@@ -290,8 +312,8 @@
 <div class="variant show" id="v-0">
   <div class="rsch">
     <div class="eyebrow">Competitive Research · Walnut Creek & East Bay</div>
-    <h1>The market is crowded on repair — and wide open on new construction.</h1>
-    <p class="lede">Every foundation company in the East Bay was built around repair. None of them explicitly own new-construction foundation work, and none anchor their brand to a single, defensible local identity. That gap is the opening for this new venture.</p>
+    <h1>The market is fragmented on the hard jobs — and nobody owns the specialist position.</h1>
+    <p class="lede">Walnut Creek is built out, so this isn't a new-construction play. The real opportunity is the terrain itself: hillside lots, expansive clay, and two active faults generate recurring, high-ticket foundation repair, stabilization, and retrofit work. Every competitor does it as a sideline to general contracting. None has claimed the engineering-led specialist brand — that's the opening.</p>
 
     <h2>The competitors we're up against</h2>
     <div class="complogos">
@@ -320,7 +342,7 @@
         <div class="lnote">4.9★ · 156 reviews · EBB-grant focused</div>
       </div>
     </div>
-    <p class="body" style="margin-top:16px"><b>Read:</b> Golden Bay is the brand to beat locally — visible, well-reviewed, full-service. But it's repair-first, like everyone else. The national players (Ram Jack, Groundworks) win on scale and lose on local warmth. The seismic specialists own one narrow lane. Nobody is the obvious answer for <b>"who pours my new foundation?"</b></p>
+    <p class="body" style="margin-top:16px"><b>Read:</b> Golden Bay is the brand to beat locally — visible, well-reviewed, full-service. But like everyone here, it treats foundations as one service among many. The national players (Ram Jack, Groundworks) win on scale and lose on local warmth. The seismic specialists own one narrow lane. Nobody is the obvious, engineering-led answer for <b>"my hillside home is moving — who do I trust?"</b></p>
 
     <h2>Who they are — the primary players</h2>
     <div class="profiles">
@@ -362,43 +384,101 @@
       </div>
     </div>
 
-    <h2>The numbers behind the opportunity</h2>
+    <h2>The market reality — and why it favors a specialist</h2>
     <div class="statband">
-      <div class="statbox"><div class="n">2,155</div><div class="l">New housing units permitted in Contra Costa County (2024) — up 3 straight years</div></div>
-      <div class="statbox"><div class="n">~500+</div><div class="l">Est. new units/yr in the core WC + ring service area</div></div>
-      <div class="statbox"><div class="n">$129K</div><div class="l">Walnut Creek ADU rebate pool — fully claimed by mid-2025</div></div>
-      <div class="statbox"><div class="n">$1–1.5M</div><div class="l">Est. annual new-construction foundation revenue at maturity</div></div>
+      <div class="statbox"><div class="n">~22<span style="font-size:16px">/yr</span></div><div class="l">ADUs allowed in Walnut Creek through 2031 (176 total) — modest in the city alone</div></div>
+      <div class="statbox"><div class="n">5,805</div><div class="l">New units planned through 2031 — but ~60% affordable/multifamily, built by big GCs</div></div>
+      <div class="statbox"><div class="n">+25–40%</div><div class="l">Cost premium on hillside foundation work — the specialist's margin lane</div></div>
+      <div class="statbox"><div class="n">2 faults</div><div class="l">Hayward + Calaveras — seismic risk makes retrofit recurring, not optional</div></div>
     </div>
-    <p class="body" style="margin-top:16px">New construction breaks into three jobs: <b>custom home foundations</b> ($30K–80K, low volume / high margin), <b>ADU foundations</b> ($5K–25K, the volume engine — demand is policy-driven and durable), and <b>additions on new foundations</b> ($8K–20K, steady middle market). ADUs carry the volume; custom homes carry the margin.</p>
+    <p class="body" style="margin-top:16px">Walnut Creek is <b>built out</b> — ground-up new construction is scarce, and what exists is affordable/multifamily work that goes to large general contractors. That kills "new home foundations" as a primary pillar. But the terrain creates something better: <b>recurring, non-discretionary, high-ticket repair and stabilization work.</b> Hillside lots on expansive clay, near two active faults, need engineered foundations, retaining walls, drainage, and retrofit — the hard jobs generalists do as a sideline and a specialist can own.</p>
+
+    <h2>Bottom-up revenue model</h2>
+    <p class="body">Built from <b>realistic job counts a 2–3 crew specialist completes per year</b> — not market-share assumptions. Cross-checked against the local incumbent (~30 permits/yr). Tickets use conservative Bay Area midpoints. Service area is the hillside corridor: Walnut Creek, Lafayette, Orinda, Moraga, Alamo, Danville.</p>
+    <table class="modeltable">
+      <thead><tr>
+        <th>Revenue line</th><th>Pillar</th><th class="num">Avg ticket</th>
+        <th class="num">Year 1</th><th class="num">Year 2</th><th class="num">Year 3</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="seg">Foundation repair &amp; leveling</span><br><span class="sub">Piers, slab jacking, crack &amp; settlement repair</span></td>
+          <td><span class="pill pill-core">CORE</span></td>
+          <td class="num">$9,000</td>
+          <td class="num">16j · $144K</td><td class="num">34j · $306K</td><td class="num y3">50j · $450K</td>
+        </tr>
+        <tr>
+          <td><span class="seg">Hillside stabilization + retaining/drainage</span><br><span class="sub">Caissons, grade beams, engineered walls, French drains</span></td>
+          <td><span class="pill pill-core">CORE</span></td>
+          <td class="num">$22,000</td>
+          <td class="num">4j · $88K</td><td class="num">11j · $242K</td><td class="num y3">17j · $374K</td>
+        </tr>
+        <tr>
+          <td><span class="seg">Seismic retrofit</span><br><span class="sub">Brace &amp; bolt, cripple wall — EBB-grant eligible</span></td>
+          <td><span class="pill pill-core">CORE</span></td>
+          <td class="num">$7,000</td>
+          <td class="num">6j · $42K</td><td class="num">14j · $98K</td><td class="num y3">22j · $154K</td>
+        </tr>
+        <tr>
+          <td><span class="seg">ADU foundations</span><br><span class="sub">Detached-unit slabs — the LRL synergy &amp; growth engine</span></td>
+          <td><span class="pill pill-growth">GROWTH</span></td>
+          <td class="num">$14,000</td>
+          <td class="num">4j · $56K</td><td class="num">12j · $168K</td><td class="num y3">20j · $280K</td>
+        </tr>
+        <tr>
+          <td><span class="seg">New construction / additions</span><br><span class="sub">Opportunistic pours — not a marketed pillar</span></td>
+          <td><span class="pill pill-upside">UPSIDE</span></td>
+          <td class="num">$35,000</td>
+          <td class="num">1j · $35K</td><td class="num">3j · $105K</td><td class="num y3">5j · $175K</td>
+        </tr>
+        <tr class="totalrow">
+          <td>Total</td><td></td><td></td>
+          <td class="num">31j · $365K</td><td class="num">74j · $919K</td><td class="num y3">114j · $1.43M</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="body" style="font-size:13px;color:#9a9aa3;margin-top:10px">Downside sensitivity (−25% volume): Yr1 $274K · Yr2 $689K · Yr3 $1.07M. Illustrative gross profit at a conservative 38% blended margin ≈ <b style="color:#fff">$545K</b> in Year 3.</p>
+
+    <h2>Where the revenue comes from (Year 3)</h2>
+    <div class="mixbar">
+      <div class="seg-core" style="width:68%">CORE 68%</div>
+      <div class="seg-growth" style="width:20%">GROWTH 20%</div>
+      <div class="seg-upside" style="width:12%">UPSIDE 12%</div>
+    </div>
+    <div class="mixlegend">
+      <span><b>Core ($978K)</b> — repair, hillside, seismic. The weatherproof, recession-resistant base.</span>
+      <span><b>Growth ($280K)</b> — ADU foundations. Policy-driven, durable, the LRL bridge.</span>
+      <span><b>Upside ($175K)</b> — opportunistic new pours. Nice-to-have, not the thesis.</span>
+    </div>
 
     <h2>Gaps in the market = our openings</h2>
     <div class="rgrid">
       <div class="rcard">
         <h3 class="gap">What competitors miss</h3>
         <ul>
-          <li>No one owns "new construction foundation" in their brand or messaging</li>
+          <li>No one owns the engineering-led <b>hillside specialist</b> position — it's a sideline for all of them</li>
           <li>Sites look generic and template-built</li>
-          <li>Repair-only focus leaves the B2B builder channel underworked</li>
           <li>National players are cold and corporate; locals are unpolished</li>
-          <li>Thin educational content (inspections, buying a home with foundation issues)</li>
+          <li>ADU foundations treated as commodity work, not a focus</li>
+          <li>Thin educational content (inspections, buying a hillside home, what movement means)</li>
         </ul>
       </div>
       <div class="rcard">
         <h3 class="opp">How the new venture wins</h3>
         <ul>
-          <li>Lead as the specialist that does both repair <b>and</b> new build</li>
-          <li>Clean, professional brand that stands out instantly</li>
-          <li>Subcontract new foundations to GCs &amp; custom-home builders</li>
-          <li>Own local warmth + owner-operated story against the nationals</li>
-          <li>Capture ADU demand with rebate-aware, permit-handled service</li>
+          <li>Own the specialist brand for the <b>hard hillside &amp; stabilization jobs</b></li>
+          <li>Clean, engineering-credible brand that stands out instantly</li>
+          <li>Local, owner-operated story against the faceless nationals</li>
+          <li>ADU foundations as a growth engine — a natural extension of LRL's ADU work</li>
+          <li>Bundle repair + retaining + drainage + retrofit into one high-value job</li>
         </ul>
       </div>
     </div>
 
     <h2>Strategic takeaway</h2>
     <div class="takeaway">
-      <h3>Position as the foundation specialist, not the generalist.</h3>
-      <p>Every competitor is a general contractor who happens to do foundations. The new venture should be the company that <b>only</b> does foundations — repair and new construction — anchored to a defensible East Bay identity. Repair is the safe near-term revenue; new construction is the differentiated story nobody else is telling. The five brand directions that follow each express that positioning a different way.</p>
+      <h3>Position as the hillside &amp; foundation specialist — not the generalist.</h3>
+      <p>Every competitor is a general contractor who happens to do foundations. The new venture should be the company that <b>only</b> does foundations — repair, hillside stabilization, retaining walls, drainage, seismic, and ADU foundations — anchored to a defensible East Bay identity. Core repair and hillside work is the weatherproof revenue base (≈68% at maturity); ADU foundations are the growth engine and the bridge to LRL's existing business. New construction is opportunistic upside, not the story. The brand directions that follow each express this a different way — and the terrain-rooted names (Diablo, Bayrock) fit the expertise positioning best.</p>
     </div>
   </div>
 </div>
