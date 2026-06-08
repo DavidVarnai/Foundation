@@ -258,6 +258,20 @@
   .takeaway { background:linear-gradient(135deg,#13322f,#0c3b3a); border:1px solid #2f5d5b; border-radius:14px; padding:30px; margin-top:18px; }
   .takeaway h3 { font-family:'Sora',sans-serif; font-weight:800; font-size:18px; color:#f0a830; margin-bottom:12px; }
   .takeaway p { font-size:15px; line-height:1.65; color:#dbe7e6; }
+
+  /* competitor profile cards */
+  .profiles { display:flex; flex-direction:column; gap:12px; }
+  .profile { background:#17171b; border:1px solid #26262b; border-radius:12px; padding:24px; display:grid; grid-template-columns:160px 1fr; gap:24px; align-items:start; }
+  @media(max-width:760px){ .profile{ grid-template-columns:1fr; gap:14px; } }
+  .profile .pleft { border-left:3px solid #f3b61f; padding-left:16px; }
+  .profile .pname { font-family:'Sora',sans-serif; font-weight:800; font-size:17px; line-height:1.1; color:#fff; }
+  .profile .prole { font-family:'Space Mono',monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:#7fb0ae; margin-top:8px; }
+  .profile .pbody { font-size:14px; line-height:1.65; color:#cfcfd6; }
+  .profile .pbody b { color:#fff; }
+  .profile .pstats { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+  .profile .pstat { font-family:'Space Mono',monospace; font-size:11px; letter-spacing:.03em; background:#1f1f25; border:1px solid #2e2e35; border-radius:6px; padding:6px 11px; color:#cdb46a; }
+  .profile .pstat.warm { color:#7ed957; }
+  .profile .pstat.cool { color:#39b6e8; }
 </style>
 </head>
 <body>
@@ -307,6 +321,46 @@
       </div>
     </div>
     <p class="body" style="margin-top:16px"><b>Read:</b> Golden Bay is the brand to beat locally — visible, well-reviewed, full-service. But it's repair-first, like everyone else. The national players (Ram Jack, Groundworks) win on scale and lose on local warmth. The seismic specialists own one narrow lane. Nobody is the obvious answer for <b>"who pours my new foundation?"</b></p>
+
+    <h2>Who they are — the primary players</h2>
+    <div class="profiles">
+      <div class="profile">
+        <div class="pleft"><div class="pname">Golden Bay Foundation Builders</div><div class="prole">The local incumbent</div></div>
+        <div class="pbody">The name to beat in Walnut Creek. A decade in foundation repair, family-run, and the most visible local brand — strong Yelp presence and active in neighborhood referral channels. Full repair stack: underpinning, retrofit, crawl space, retaining walls. <b>But repair-first, with no real new-construction positioning</b> — and owner Nisan Zeevi's personal reputation, while an asset, is also a single point of dependency.
+          <div class="pstats"><span class="pstat">10 yrs in business</span><span class="pstat">BBB A, accredited 2023</span><span class="pstat">Lic #1112835</span><span class="pstat">~60 permits / 2 yrs</span><span class="pstat">39 Yelp reviews</span></div>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="pleft" style="border-color:#1c3d2e"><div class="pname">Mares &amp; Dow Construction</div><div class="prole">Established generalist</div></div>
+        <div class="pbody">The old guard — a Concord partnership running since 1983, covering Walnut Creek and the full East Bay. They list 30+ services including foundation repair, custom homes, and even new foundation construction, but foundations are one line item in a remodeling-and-skylights business, not a focus. <b>Deep trust and longevity, weak digital specialization</b> — they don't show up as a foundation specialist because they aren't one.
+          <div class="pstats"><span class="pstat warm">40+ yrs (since 1983)</span><span class="pstat warm">5.0★ Angi</span><span class="pstat warm">~28 Yelp reviews</span><span class="pstat">30+ services</span></div>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="pleft" style="border-color:#b8232f"><div class="pname">Ram Jack / Foundation Solutions</div><div class="prole">National-backed specialist</div></div>
+        <div class="pbody">A franchise-backed repair specialist leaning on the national Ram Jack brand and its proprietary steel pier systems. Strong on engineered repair — helical piles and push piers to lift and stabilize. <b>Hard to out-price on repair, easy to out-humanize</b>; the franchise model means less local identity and a narrower, repair-only scope with no new-build play.
+          <div class="pstats"><span class="pstat">25 yrs experience</span><span class="pstat">Ram Jack steel systems</span><span class="pstat">Repair-only</span></div>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="pleft" style="border-color:#7ed957"><div class="pname">Groundworks California</div><div class="prole">Enterprise operator</div></div>
+        <div class="pbody">The corporate giant — a national foundation-services roll-up actively pulling permits in Walnut Creek. Capable and well-capitalized, with engineered solutions at scale. <b>Their weakness is exactly what a local venture can exploit:</b> they're cold, process-driven, and carry zero community warmth or owner-operated story.
+          <div class="pstats"><span class="pstat">$59,300 WC job (Nov '25)</span><span class="pstat">21 piers + 12 jacks</span><span class="pstat">National scale</span></div>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="pleft" style="border-color:#e8a13a"><div class="pname">GS Builders Group</div><div class="prole">The rising challenger</div></div>
+        <div class="pbody">A newer entrant serving Walnut Creek, Danville, Lafayette, San Ramon, and Concord, positioning on transparency, licensing, and long-term results. <b>Essentially running the same playbook as Golden Bay</b> — which signals the repair-specialist lane is getting crowded, and reinforces why differentiating on new construction matters.
+          <div class="pstats"><span class="pstat">Newer brand</span><span class="pstat">5-city service area</span><span class="pstat">Transparency angle</span></div>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="pleft" style="border-color:#39b6e8"><div class="pname">Bolt Down / East Bay Retrofit</div><div class="prole">Seismic-only specialists</div></div>
+        <div class="pbody">Narrow-lane specialists focused purely on earthquake retrofit, fed by the state's Earthquake Brace &amp; Bolt (EBB) grant pipeline. Excellent reviews within that niche. <b>Not a full-service competitor</b> — they validate that seismic is a real, fundable lead source, but leave repair and all new construction completely open.
+          <div class="pstats"><span class="pstat cool">4.9★ rating</span><span class="pstat cool">156 reviews</span><span class="pstat cool">EBB-grant driven</span></div>
+        </div>
+      </div>
+    </div>
 
     <h2>The numbers behind the opportunity</h2>
     <div class="statband">
