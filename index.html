@@ -47,40 +47,43 @@
   .landing-wrap { max-width:1180px; margin:0 auto 50px; padding:0 20px; }
   .landing { border-radius:16px; overflow:hidden; }
 
-  /* ============ V1 — CONTRA COSTA FOUNDATION (refined navy/stone, editorial) ============ */
-  .v1-id { background:#f4f1ea; color:#16243a; }
-  .v1-id .meta-cell { color:#16243a; }
-  .v1-logo { text-align:center; }
-  .v1-logo .mark { width:62px; height:62px; margin:0 auto 14px; position:relative; }
+  /* ============ V1 — CONTRA COSTA FOUNDATION (topographic terrain, deep navy + copper) ============ */
+  .v1-id { background:linear-gradient(135deg,#102544 0%,#0a1830 100%); color:#f0ead9; position:relative; overflow:hidden; }
+  .v1-id::after { content:""; position:absolute; inset:0; background-image:repeating-radial-gradient(circle at 70% 120%,transparent 0 18px,rgba(214,158,99,.10) 18px 19px); pointer-events:none; }
+  .v1-id .meta-cell { color:#f0ead9; position:relative; }
+  .v1-logo { text-align:center; position:relative; }
+  .v1-logo .mark { width:74px; height:74px; margin:0 auto 16px; }
   .v1-logo .mark svg { width:100%; height:100%; }
-  .v1-logo .name { font-family:'Fraunces',serif; font-weight:900; font-size:30px; letter-spacing:-.01em; line-height:.95; }
-  .v1-logo .sub { font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:10px; letter-spacing:.34em; text-transform:uppercase; margin-top:8px; color:#516079; }
-  .v1-land { background:#f4f1ea; color:#16243a; font-family:'Libre Franklin',sans-serif; }
-  .v1-land .nav { display:flex; justify-content:space-between; align-items:center; padding:24px 44px; border-bottom:1px solid #ddd5c5; }
-  .v1-land .nav .brand { font-family:'Fraunces',serif; font-weight:900; font-size:19px; }
-  .v1-land .nav .links { display:flex; gap:26px; font-size:13px; font-weight:600; }
-  .v1-land .nav .links span:last-child { background:#16243a; color:#f4f1ea; padding:9px 18px; border-radius:4px; }
-  .v1-land .hero { padding:78px 44px 60px; display:grid; grid-template-columns:1.2fr .8fr; gap:40px; align-items:end; }
-  @media(max-width:760px){ .v1-land .hero{ grid-template-columns:1fr; } }
-  .v1-land .hero .kick { font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:#8a6d3a; margin-bottom:22px; }
-  .v1-land .hero h1 { font-family:'Fraunces',serif; font-weight:900; font-size:62px; line-height:.96; letter-spacing:-.02em; }
-  .v1-land .hero h1 em { font-style:italic; color:#8a6d3a; }
-  .v1-land .hero p { font-size:16px; line-height:1.6; color:#3a4759; margin-top:22px; max-width:440px; }
+  .v1-logo .name { font-family:'Fraunces',serif; font-weight:900; font-size:31px; letter-spacing:-.02em; line-height:.92; color:#fff; }
+  .v1-logo .sub { font-family:'IBM Plex Mono',monospace; font-weight:400; font-size:10px; letter-spacing:.3em; text-transform:uppercase; margin-top:12px; color:#d69e63; }
+  .v1-land { background:#0a1830; color:#dde5f0; font-family:'Libre Franklin',sans-serif; }
+  .v1-land .nav { display:flex; justify-content:space-between; align-items:center; padding:24px 44px; border-bottom:1px solid #1c3354; }
+  .v1-land .nav .brand { font-family:'Fraunces',serif; font-weight:900; font-size:19px; color:#fff; }
+  .v1-land .nav .links { display:flex; gap:26px; font-size:13px; font-weight:600; align-items:center; }
+  .v1-land .nav .links span:last-child { background:#d69e63; color:#0a1830; padding:9px 18px; border-radius:4px; }
+  .v1-land .hero { position:relative; padding:84px 44px 70px; overflow:hidden; }
+  .v1-land .hero .topo { position:absolute; inset:0; width:100%; height:100%; opacity:.5; }
+  .v1-land .hero > .inner { position:relative; display:grid; grid-template-columns:1.25fr .75fr; gap:40px; align-items:end; }
+  @media(max-width:760px){ .v1-land .hero > .inner{ grid-template-columns:1fr; } }
+  .v1-land .hero .kick { font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#d69e63; margin-bottom:22px; }
+  .v1-land .hero h1 { font-family:'Fraunces',serif; font-weight:900; font-size:64px; line-height:.95; letter-spacing:-.02em; color:#fff; }
+  .v1-land .hero h1 em { font-style:italic; color:#d69e63; }
+  .v1-land .hero p { font-size:16px; line-height:1.6; color:#aebbce; margin-top:22px; max-width:440px; }
   .v1-land .hero .cta { margin-top:28px; display:flex; gap:14px; }
   .v1-land .hero .cta a { font-size:13px; font-weight:700; padding:13px 24px; border-radius:4px; text-decoration:none; }
-  .v1-land .hero .cta .p { background:#16243a; color:#f4f1ea; }
-  .v1-land .hero .cta .s { border:1px solid #16243a; color:#16243a; }
-  .v1-land .hero .stat { border-left:2px solid #8a6d3a; padding-left:18px; }
-  .v1-land .hero .stat .n { font-family:'Fraunces',serif; font-weight:900; font-size:46px; line-height:1; }
-  .v1-land .hero .stat .l { font-size:12px; color:#3a4759; margin-top:6px; }
+  .v1-land .hero .cta .p { background:#d69e63; color:#0a1830; }
+  .v1-land .hero .cta .s { border:1px solid #3a4f72; color:#dde5f0; }
+  .v1-land .hero .stat { border-left:2px solid #d69e63; padding-left:18px; }
+  .v1-land .hero .stat .n { font-family:'Fraunces',serif; font-weight:900; font-size:46px; line-height:1; color:#fff; }
+  .v1-land .hero .stat .l { font-size:12px; color:#aebbce; margin-top:6px; }
   .v1-land .hero .stat + .stat { margin-top:24px; }
-  .v1-land .strip { background:#16243a; color:#cdd6e4; display:flex; justify-content:space-around; flex-wrap:wrap; gap:14px; padding:20px 44px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.08em; }
-  .v1-land .svcs { padding:54px 44px; display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:#ddd5c5; }
+  .v1-land .strip { background:#d69e63; color:#0a1830; display:flex; justify-content:space-around; flex-wrap:wrap; gap:14px; padding:18px 44px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.08em; font-weight:600; }
+  .v1-land .svcs { padding:54px 44px; display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:#1c3354; }
   @media(max-width:760px){ .v1-land .svcs{ grid-template-columns:1fr; } }
-  .v1-land .svc { background:#f4f1ea; padding:30px; }
-  .v1-land .svc h3 { font-family:'Fraunces',serif; font-weight:700; font-size:22px; margin-bottom:8px; }
-  .v1-land .svc p { font-size:14px; line-height:1.55; color:#3a4759; }
-  .v1-land .svc .tag { font-family:'IBM Plex Mono',monospace; font-size:11px; color:#8a6d3a; letter-spacing:.1em; }
+  .v1-land .svc { background:#0d1f3c; padding:30px; }
+  .v1-land .svc h3 { font-family:'Fraunces',serif; font-weight:700; font-size:22px; margin-bottom:8px; color:#fff; }
+  .v1-land .svc p { font-size:14px; line-height:1.55; color:#aebbce; }
+  .v1-land .svc .tag { font-family:'IBM Plex Mono',monospace; font-size:11px; color:#d69e63; letter-spacing:.1em; }
 
   /* ============ V2 — EAST BAY FOUNDATION CO (industrial, dark, utilitarian) ============ */
   .v2-id { background:#16181c; color:#f3b61f; border:1px solid #2a2d33; }
@@ -115,33 +118,37 @@
   .v2-land .svc h3 { font-family:'Archivo',sans-serif; font-weight:800; font-size:17px; text-transform:uppercase; margin:14px 0 8px; }
   .v2-land .svc p { font-size:13px; line-height:1.5; color:#8c8e95; }
 
-  /* ============ V3 — DIABLO FOUNDATION (premium/refined, warm minimal, Mt Diablo nod) ============ */
-  .v3-id { background:#1a1714; color:#e7ddd0; }
-  .v3-id .meta-cell { color:#e7ddd0; }
-  .v3-logo { text-align:center; }
-  .v3-logo .mark { width:70px; height:70px; margin:0 auto 16px; }
-  .v3-logo .name { font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:32px; letter-spacing:-.02em; color:#fff; }
-  .v3-logo .sub { font-family:'Manrope',sans-serif; font-weight:700; font-size:10px; letter-spacing:.4em; text-transform:uppercase; color:#b08d57; margin-top:9px; }
-  .v3-land { background:#fbf8f3; color:#1a1714; font-family:'Manrope',sans-serif; }
-  .v3-land .nav { display:flex; justify-content:space-between; align-items:center; padding:26px 46px; }
-  .v3-land .nav .brand { font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:20px; letter-spacing:-.02em; }
+  /* ============ V3 — DIABLO FOUNDATION (dramatic dusk mountain, charcoal + ember) ============ */
+  .v3-id { background:linear-gradient(175deg,#211a2b 0%,#3c2233 45%,#6e3528 100%); color:#f3e4d4; position:relative; overflow:hidden; }
+  .v3-id .meta-cell { color:#f3e4d4; }
+  .v3-logo { text-align:center; position:relative; z-index:2; }
+  .v3-logo .mark { width:84px; height:84px; margin:0 auto 16px; }
+  .v3-logo .name { font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:33px; letter-spacing:-.025em; color:#fff; }
+  .v3-logo .sub { font-family:'Manrope',sans-serif; font-weight:700; font-size:10px; letter-spacing:.42em; text-transform:uppercase; color:#e8915b; margin-top:10px; }
+  .v3-land { background:#1b1521; color:#ede3d6; font-family:'Manrope',sans-serif; }
+  .v3-land .nav { display:flex; justify-content:space-between; align-items:center; padding:26px 46px; position:relative; z-index:3; }
+  .v3-land .nav .brand { font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:20px; letter-spacing:-.02em; color:#fff; }
   .v3-land .nav .links { display:flex; gap:28px; font-size:13px; font-weight:700; align-items:center; }
-  .v3-land .nav .links .b { background:#b08d57; color:#fff; padding:10px 20px; border-radius:30px; }
-  .v3-land .hero { padding:50px 46px 70px; text-align:center; }
-  .v3-land .hero .kick { font-family:'Manrope',sans-serif; font-weight:700; font-size:12px; letter-spacing:.3em; text-transform:uppercase; color:#b08d57; margin-bottom:26px; }
-  .v3-land .hero h1 { font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:66px; line-height:.98; letter-spacing:-.03em; max-width:880px; margin:0 auto; }
-  .v3-land .hero p { font-size:17px; line-height:1.6; color:#5c544a; margin:26px auto 0; max-width:520px; }
-  .v3-land .hero .cta { margin-top:34px; }
+  .v3-land .nav .links span { color:#cdbfd0; }
+  .v3-land .nav .links .b { background:linear-gradient(135deg,#e8915b,#cf5f3a); color:#fff; padding:10px 20px; border-radius:30px; }
+  .v3-land .hero { position:relative; padding:64px 46px 0; text-align:center; overflow:hidden; }
+  .v3-land .hero .sky { position:absolute; inset:0; background:linear-gradient(180deg,#1b1521 0%,#3a2233 50%,#6e3528 100%); }
+  .v3-land .hero .inner { position:relative; z-index:2; }
+  .v3-land .hero .kick { font-family:'Manrope',sans-serif; font-weight:700; font-size:12px; letter-spacing:.32em; text-transform:uppercase; color:#e8915b; margin-bottom:26px; }
+  .v3-land .hero h1 { font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:68px; line-height:.97; letter-spacing:-.03em; max-width:900px; margin:0 auto; color:#fff; }
+  .v3-land .hero h1 em { font-style:normal; background:linear-gradient(120deg,#f6b06f,#e8915b); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+  .v3-land .hero p { font-size:17px; line-height:1.6; color:#d3c3c8; margin:26px auto 0; max-width:520px; }
+  .v3-land .hero .cta { margin-top:34px; padding-bottom:70px; }
   .v3-land .hero .cta a { font-weight:700; font-size:14px; padding:15px 30px; border-radius:30px; text-decoration:none; }
-  .v3-land .hero .cta .p { background:#1a1714; color:#fbf8f3; }
-  .v3-land .hero .cta .s { color:#1a1714; margin-left:10px; }
-  .v3-land .ridge { height:70px; background:linear-gradient(180deg,#fbf8f3,#f1ebe1); position:relative; }
-  .v3-land .svcs { background:#f1ebe1; padding:60px 46px; display:grid; grid-template-columns:repeat(2,1fr); gap:34px; }
+  .v3-land .hero .cta .p { background:#fff; color:#1b1521; }
+  .v3-land .hero .cta .s { color:#fff; margin-left:10px; border:1px solid rgba(255,255,255,.3); }
+  .v3-land .hero .range { position:absolute; left:0; right:0; bottom:0; width:100%; height:160px; z-index:1; display:block; }
+  .v3-land .svcs { background:#1b1521; padding:64px 46px; display:grid; grid-template-columns:repeat(2,1fr); gap:30px; position:relative; }
   @media(max-width:760px){ .v3-land .svcs{ grid-template-columns:1fr; } }
-  .v3-land .svc { display:flex; gap:18px; }
-  .v3-land .svc .ic { width:46px; height:46px; border-radius:50%; background:#b08d57; flex-shrink:0; display:flex; align-items:center; justify-content:center; color:#fff; font-family:'Bricolage Grotesque',sans-serif; font-weight:800; }
-  .v3-land .svc h3 { font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:20px; margin-bottom:6px; }
-  .v3-land .svc p { font-size:14px; line-height:1.55; color:#5c544a; }
+  .v3-land .svc { display:flex; gap:18px; background:#241d2b; border:1px solid #34293c; border-radius:14px; padding:26px; }
+  .v3-land .svc .ic { width:46px; height:46px; border-radius:12px; background:linear-gradient(135deg,#e8915b,#cf5f3a); flex-shrink:0; display:flex; align-items:center; justify-content:center; color:#fff; font-family:'Bricolage Grotesque',sans-serif; font-weight:800; }
+  .v3-land .svc h3 { font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:20px; margin-bottom:6px; color:#fff; }
+  .v3-land .svc p { font-size:14px; line-height:1.55; color:#bdb0c2; }
 
   /* ============ V4 — 925 FOUNDATION (bold modern, area-code, confident teal/cream) ============ */
   .v4-id { background:#0c3b3a; color:#f5f0e6; }
@@ -177,37 +184,48 @@
   .v4-land .svc p { font-size:13px; line-height:1.5; color:#4a6b69; }
   .v4-land .svc .dot { width:10px; height:10px; border-radius:50%; background:#f0a830; margin-bottom:14px; }
 
-  /* ============ V5 — BAYROCK FOUNDATIONS (editorial/serif, slate + rust, trustworthy) ============ */
-  .v5-id { background:#ece9e4; color:#2b2723; }
-  .v5-id .meta-cell { color:#2b2723; }
-  .v5-logo { text-align:center; }
-  .v5-logo .mark { width:58px; height:58px; margin:0 auto 14px; }
-  .v5-logo .name { font-family:'Instrument Serif',serif; font-size:40px; line-height:.9; letter-spacing:0; }
-  .v5-logo .sub { font-family:'Archivo',sans-serif; font-weight:700; font-size:10px; letter-spacing:.32em; text-transform:uppercase; color:#9c4a2f; margin-top:6px; }
-  .v5-land { background:#ece9e4; color:#2b2723; font-family:'Archivo',sans-serif; }
-  .v5-land .nav { display:flex; justify-content:space-between; align-items:center; padding:24px 46px; border-bottom:1px solid #d3cec5; }
-  .v5-land .nav .brand { font-family:'Instrument Serif',serif; font-size:26px; }
-  .v5-land .nav .links { display:flex; gap:26px; font-size:13px; font-weight:600; align-items:center; }
-  .v5-land .nav .links .b { background:#9c4a2f; color:#ece9e4; padding:10px 18px; }
-  .v5-land .hero { padding:72px 46px; display:grid; grid-template-columns:1.1fr .9fr; gap:50px; }
+  /* ============ V5 — BAYROCK FOUNDATIONS (geological strata, ink + rust + sediment) ============ */
+  .v5-id { background:#16110d; color:#f0e6d6; position:relative; overflow:hidden; }
+  .v5-id .meta-cell { color:#f0e6d6; }
+  .v5-logo { text-align:center; position:relative; z-index:2; }
+  .v5-logo .mark { width:72px; height:72px; margin:0 auto 16px; }
+  .v5-logo .name { font-family:'Archivo',sans-serif; font-weight:900; font-size:42px; line-height:.84; letter-spacing:-.035em; text-transform:uppercase; color:#fff; }
+  .v5-logo .name b { color:#d9663f; font-weight:900; }
+  .v5-logo .sub { font-family:'Space Mono',monospace; font-weight:700; font-size:10px; letter-spacing:.3em; text-transform:uppercase; color:#c9a87e; margin-top:12px; }
+  .v5-land { background:#1c1611; color:#ece2d4; font-family:'Archivo',sans-serif; }
+  .v5-land .nav { display:flex; justify-content:space-between; align-items:center; padding:24px 46px; border-bottom:1px solid #34281e; }
+  .v5-land .nav .brand { font-family:'Archivo',sans-serif; font-weight:900; font-size:24px; text-transform:uppercase; letter-spacing:-.03em; color:#fff; }
+  .v5-land .nav .brand b { color:#d9663f; }
+  .v5-land .nav .links { display:flex; gap:26px; font-size:13px; font-weight:700; align-items:center; }
+  .v5-land .nav .links span { color:#c3b6a4; }
+  .v5-land .nav .links .b { background:#d9663f; color:#1c1611; padding:10px 18px; border-radius:4px; }
+  .v5-land .hero { position:relative; padding:80px 46px; display:grid; grid-template-columns:1.15fr .85fr; gap:50px; align-items:center; overflow:hidden; }
   @media(max-width:760px){ .v5-land .hero{ grid-template-columns:1fr; } }
-  .v5-land .hero .kick { font-family:'Archivo',sans-serif; font-weight:700; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:#9c4a2f; margin-bottom:22px; }
-  .v5-land .hero h1 { font-family:'Instrument Serif',serif; font-size:70px; line-height:.94; letter-spacing:-.01em; }
-  .v5-land .hero h1 em { color:#9c4a2f; }
-  .v5-land .hero p { font-size:16px; line-height:1.6; color:#5a544c; margin-top:24px; max-width:440px; }
+  .v5-land .hero .strata { position:absolute; right:0; top:0; bottom:0; width:42%; height:100%; z-index:0; opacity:.9; }
+  @media(max-width:760px){ .v5-land .hero .strata{ display:none; } }
+  .v5-land .hero .inner { position:relative; z-index:2; }
+  .v5-land .hero .kick { font-family:'Space Mono',monospace; font-weight:700; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:#d9663f; margin-bottom:22px; }
+  .v5-land .hero h1 { font-family:'Archivo',sans-serif; font-weight:900; font-size:72px; line-height:.9; letter-spacing:-.04em; text-transform:uppercase; color:#fff; }
+  .v5-land .hero h1 em { font-style:normal; color:#d9663f; }
+  .v5-land .hero p { font-size:16px; line-height:1.6; color:#bfb09c; margin-top:24px; max-width:440px; }
   .v5-land .hero .cta { margin-top:30px; display:flex; gap:14px; }
-  .v5-land .hero .cta a { font-size:13px; font-weight:700; padding:14px 26px; text-decoration:none; }
-  .v5-land .hero .cta .p { background:#2b2723; color:#ece9e4; }
-  .v5-land .hero .cta .s { border:1px solid #2b2723; color:#2b2723; }
-  .v5-land .hero .quote { border-top:2px solid #2b2723; padding-top:22px; }
-  .v5-land .hero .quote p { font-family:'Instrument Serif',serif; font-style:italic; font-size:24px; line-height:1.3; color:#2b2723; margin:0; }
-  .v5-land .hero .quote .by { font-family:'Archivo',sans-serif; font-size:12px; font-weight:600; color:#9c4a2f; margin-top:14px; text-transform:uppercase; letter-spacing:.1em; }
-  .v5-land .svcs { border-top:1px solid #d3cec5; display:grid; grid-template-columns:repeat(4,1fr); }
+  .v5-land .hero .cta a { font-size:13px; font-weight:700; padding:14px 26px; text-decoration:none; border-radius:4px; }
+  .v5-land .hero .cta .p { background:#d9663f; color:#1c1611; }
+  .v5-land .hero .cta .s { border:1px solid #4a3a2c; color:#ece2d4; }
+  .v5-land .hero .quote { position:relative; z-index:2; border-left:3px solid #d9663f; padding-left:24px; }
+  .v5-land .hero .quote p { font-family:'Archivo',sans-serif; font-weight:800; font-size:25px; line-height:1.25; color:#fff; margin:0; letter-spacing:-.01em; }
+  .v5-land .hero .quote .by { font-family:'Space Mono',monospace; font-size:11px; font-weight:700; color:#d9663f; margin-top:16px; text-transform:uppercase; letter-spacing:.12em; }
+  .v5-land .svcs { border-top:1px solid #34281e; display:grid; grid-template-columns:repeat(4,1fr); }
   @media(max-width:760px){ .v5-land .svcs{ grid-template-columns:repeat(2,1fr); } }
-  .v5-land .svc { padding:34px 26px; border-right:1px solid #d3cec5; }
-  .v5-land .svc .n { font-family:'Instrument Serif',serif; font-size:34px; color:#9c4a2f; }
-  .v5-land .svc h3 { font-family:'Archivo',sans-serif; font-weight:800; font-size:15px; text-transform:uppercase; letter-spacing:.03em; margin:10px 0 7px; }
-  .v5-land .svc p { font-size:13px; line-height:1.5; color:#5a544c; }
+  .v5-land .svc { padding:34px 26px; border-right:1px solid #34281e; position:relative; }
+  .v5-land .svc::before { content:""; position:absolute; left:0; top:0; width:100%; height:4px; }
+  .v5-land .svc:nth-child(1)::before { background:#d9663f; }
+  .v5-land .svc:nth-child(2)::before { background:#b8854a; }
+  .v5-land .svc:nth-child(3)::before { background:#8a6b3f; }
+  .v5-land .svc:nth-child(4)::before { background:#5e5238; }
+  .v5-land .svc .n { font-family:'Archivo',sans-serif; font-weight:900; font-size:34px; color:#d9663f; }
+  .v5-land .svc h3 { font-family:'Archivo',sans-serif; font-weight:800; font-size:15px; text-transform:uppercase; letter-spacing:.03em; margin:10px 0 7px; color:#fff; }
+  .v5-land .svc p { font-size:13px; line-height:1.5; color:#bfb09c; }
 
   /* ============ RESEARCH PAGE (00) ============ */
   .rsch { max-width:1100px; margin:0 auto; padding:46px 24px 70px; }
@@ -263,6 +281,8 @@
   .modeltable { width:100%; border-collapse:collapse; margin:6px 0; font-size:13.5px; }
   .modeltable th { text-align:left; font-family:'Space Mono',monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:#7a7a85; padding:10px 12px; border-bottom:1px solid #2e2e35; }
   .modeltable th.num, .modeltable td.num { text-align:right; font-variant-numeric:tabular-nums; }
+  .modeltable th.grouphd { text-align:center; color:#cdb46a; border-bottom:1px solid #3a3a42; padding-bottom:6px; }
+  .modeltable th.sm { font-size:9px; padding-top:6px; color:#7a7a85; }
   .modeltable td { padding:13px 12px; border-bottom:1px solid #1f1f24; color:#cfcfd6; }
   .modeltable td .seg { color:#fff; font-weight:500; }
   .modeltable td .sub { font-size:11px; color:#8c8e95; }
@@ -396,44 +416,65 @@
     <h2>Bottom-up revenue model</h2>
     <p class="body">Built from <b>realistic job counts a 2–3 crew specialist completes per year</b> — not market-share assumptions. Cross-checked against the local incumbent (~30 permits/yr). Tickets use conservative Bay Area midpoints. Service area is the hillside corridor: Walnut Creek, Lafayette, Orinda, Moraga, Alamo, Danville.</p>
     <table class="modeltable">
-      <thead><tr>
-        <th>Revenue line</th><th>Pillar</th><th class="num">Avg ticket</th>
-        <th class="num">Year 1</th><th class="num">Year 2</th><th class="num">Year 3</th>
-      </tr></thead>
+      <thead>
+        <tr>
+          <th rowspan="2">Revenue line</th><th rowspan="2">Pillar</th><th class="num" rowspan="2">Avg ticket</th>
+          <th class="num grouphd" colspan="2">Year 1</th>
+          <th class="num grouphd" colspan="2">Year 2</th>
+          <th class="num grouphd" colspan="2">Year 3</th>
+        </tr>
+        <tr>
+          <th class="num sm">Jobs</th><th class="num sm">Revenue</th>
+          <th class="num sm">Jobs</th><th class="num sm">Revenue</th>
+          <th class="num sm">Jobs</th><th class="num sm">Revenue</th>
+        </tr>
+      </thead>
       <tbody>
         <tr>
           <td><span class="seg">Foundation repair &amp; leveling</span><br><span class="sub">Piers, slab jacking, crack &amp; settlement repair</span></td>
           <td><span class="pill pill-core">CORE</span></td>
           <td class="num">$9,000</td>
-          <td class="num">16j · $144K</td><td class="num">34j · $306K</td><td class="num y3">50j · $450K</td>
+          <td class="num">16</td><td class="num">$144K</td>
+          <td class="num">34</td><td class="num">$306K</td>
+          <td class="num y3">50</td><td class="num y3">$450K</td>
         </tr>
         <tr>
           <td><span class="seg">Hillside stabilization + retaining/drainage</span><br><span class="sub">Caissons, grade beams, engineered walls, French drains</span></td>
           <td><span class="pill pill-core">CORE</span></td>
           <td class="num">$22,000</td>
-          <td class="num">4j · $88K</td><td class="num">11j · $242K</td><td class="num y3">17j · $374K</td>
+          <td class="num">4</td><td class="num">$88K</td>
+          <td class="num">11</td><td class="num">$242K</td>
+          <td class="num y3">17</td><td class="num y3">$374K</td>
         </tr>
         <tr>
           <td><span class="seg">Seismic retrofit</span><br><span class="sub">Brace &amp; bolt, cripple wall — EBB-grant eligible</span></td>
           <td><span class="pill pill-core">CORE</span></td>
           <td class="num">$7,000</td>
-          <td class="num">6j · $42K</td><td class="num">14j · $98K</td><td class="num y3">22j · $154K</td>
+          <td class="num">6</td><td class="num">$42K</td>
+          <td class="num">14</td><td class="num">$98K</td>
+          <td class="num y3">22</td><td class="num y3">$154K</td>
         </tr>
         <tr>
           <td><span class="seg">ADU foundations</span><br><span class="sub">Detached-unit slabs — the LRL synergy &amp; growth engine</span></td>
           <td><span class="pill pill-growth">GROWTH</span></td>
           <td class="num">$14,000</td>
-          <td class="num">4j · $56K</td><td class="num">12j · $168K</td><td class="num y3">20j · $280K</td>
+          <td class="num">4</td><td class="num">$56K</td>
+          <td class="num">12</td><td class="num">$168K</td>
+          <td class="num y3">20</td><td class="num y3">$280K</td>
         </tr>
         <tr>
           <td><span class="seg">New construction / additions</span><br><span class="sub">Opportunistic pours — not a marketed pillar</span></td>
           <td><span class="pill pill-upside">UPSIDE</span></td>
           <td class="num">$35,000</td>
-          <td class="num">1j · $35K</td><td class="num">3j · $105K</td><td class="num y3">5j · $175K</td>
+          <td class="num">1</td><td class="num">$35K</td>
+          <td class="num">3</td><td class="num">$105K</td>
+          <td class="num y3">5</td><td class="num y3">$175K</td>
         </tr>
         <tr class="totalrow">
           <td>Total</td><td></td><td></td>
-          <td class="num">31j · $365K</td><td class="num">74j · $919K</td><td class="num y3">114j · $1.43M</td>
+          <td class="num">31</td><td class="num">$365K</td>
+          <td class="num">74</td><td class="num">$919K</td>
+          <td class="num y3">114</td><td class="num y3">$1.43M</td>
         </tr>
       </tbody>
     </table>
@@ -485,32 +526,35 @@
 
 <!-- ============ VARIANT 1 ============ -->
 <div class="variant" id="v-1">
-  <div class="section-tag">↳ Identity card — refined editorial · navy + stone + brass · Fraunces serif</div>
+  <div class="section-tag">↳ Identity card — topographic terrain · deep navy + copper · Fraunces serif</div>
   <div class="idcard-wrap"><div class="idcard v1-id">
     <div class="logo-cell">
       <div class="v1-logo">
         <div class="mark">
-          <svg viewBox="0 0 60 60" fill="none">
-            <rect x="6" y="34" width="48" height="8" fill="#16243a"/>
-            <rect x="6" y="44" width="48" height="6" fill="#8a6d3a"/>
-            <path d="M30 8 L50 30 H10 Z" fill="#16243a"/>
-            <path d="M30 18 L40 30 H20 Z" fill="#8a6d3a"/>
+          <svg viewBox="0 0 80 80" fill="none">
+            <circle cx="40" cy="40" r="38" stroke="#d69e63" stroke-width="1" opacity="0.4"/>
+            <circle cx="40" cy="40" r="29" stroke="#d69e63" stroke-width="1" opacity="0.55"/>
+            <circle cx="40" cy="40" r="20" stroke="#d69e63" stroke-width="1.2" opacity="0.75"/>
+            <circle cx="40" cy="40" r="11" stroke="#d69e63" stroke-width="1.4"/>
+            <path d="M22 52 L34 36 L42 44 L52 28 L60 38" stroke="#fff" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+            <circle cx="40" cy="40" r="3" fill="#d69e63"/>
           </svg>
         </div>
         <div class="name">Contra Costa<br>Foundation</div>
-        <div class="sub">Repair · Build · Stabilize</div>
+        <div class="sub">Engineered for the terrain</div>
       </div>
     </div>
     <div class="meta-cell">
       <div class="swatches">
-        <div class="swatch" style="background:#16243a"></div>
-        <div class="swatch" style="background:#8a6d3a"></div>
-        <div class="swatch" style="background:#f4f1ea"></div>
-        <div class="swatch" style="background:#516079"></div>
+        <div class="swatch" style="background:#0a1830"></div>
+        <div class="swatch" style="background:#102544"></div>
+        <div class="swatch" style="background:#d69e63"></div>
+        <div class="swatch" style="background:#dde5f0"></div>
       </div>
-      <div class="meta-row"><b>Typeface</b>Fraunces (display) · Libre Franklin (body)</div>
-      <div class="meta-row"><b>Voice</b>Established, county-rooted, the trusted name. Owns the place.</div>
-      <div class="meta-row"><b>Best for</b>Premium positioning, agent referrals, SEO authority on "Contra Costa."</div>
+      <div class="meta-row"><b>Concept</b>Topographic contour lines — the land itself as the mark</div>
+      <div class="meta-row"><b>Typeface</b>Fraunces (display) · Libre Franklin (body) · IBM Plex Mono (detail)</div>
+      <div class="meta-row"><b>Voice</b>County-rooted authority that knows the ground. Reads expert, not generic.</div>
+      <div class="meta-row"><b>Best for</b>SEO authority on "Contra Costa" + a terrain-led specialist story.</div>
     </div>
   </div></div>
 
@@ -518,26 +562,40 @@
   <div class="landing-wrap"><div class="landing v1-land">
     <div class="nav">
       <div class="brand">Contra Costa Foundation</div>
-      <div class="links"><span>Repair</span><span>New Construction</span><span>Seismic</span><span>Free Inspection</span></div>
+      <div class="links"><span>Repair</span><span>Hillside</span><span>Seismic</span><span>Free Inspection</span></div>
     </div>
     <div class="hero">
-      <div>
-        <div class="kick">Serving Walnut Creek & the East Bay since day one</div>
-        <h1>The county's foundation, <em>repaired and rebuilt.</em></h1>
-        <p>One specialist for both ends of the job — stabilizing the home you have, and pouring the foundation for the one you're building. Engineering-backed. Permit-handled. Warrantied.</p>
-        <div class="cta"><a class="p" href="#">Book free inspection</a><a class="s" href="#">See our work</a></div>
-      </div>
-      <div>
-        <div class="stat"><div class="n">25+</div><div class="l">Years of East Bay soil & seismic experience</div></div>
-        <div class="stat"><div class="n">2</div><div class="l">Specialties under one roof: repair + new build</div></div>
+      <svg class="topo" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid slice" fill="none">
+        <g stroke="#1c3354" stroke-width="1.5" fill="none">
+          <path d="M-50 420 C 200 380, 350 300, 520 320 S 850 420, 1050 360 1300 300"/>
+          <path d="M-50 380 C 200 340, 360 250, 540 275 S 860 380, 1060 315 1300 250"/>
+          <path d="M-50 340 C 220 300, 380 205, 560 232 S 870 340, 1070 270 1300 205"/>
+          <path d="M-50 300 C 240 262, 400 165, 580 192 S 880 300, 1080 228 1300 165"/>
+        </g>
+        <g stroke="#d69e63" stroke-width="1.5" fill="none" opacity="0.55">
+          <path d="M-50 262 C 260 226, 420 130, 600 156 S 895 262, 1090 190 1300 128"/>
+          <path d="M-50 226 C 280 192, 440 98, 620 122 S 905 226, 1100 156 1300 95"/>
+        </g>
+      </svg>
+      <div class="inner">
+        <div>
+          <div class="kick">Walnut Creek · Lafayette · Orinda · Alamo · Danville</div>
+          <h1>We know what's <em>under</em> the East Bay.</h1>
+          <p>Hillside lots, expansive clay, two active faults. The terrain that makes this area beautiful is exactly what threatens its foundations — and it's all we do. Repair, stabilization, retaining walls, drainage, and seismic retrofit.</p>
+          <div class="cta"><a class="p" href="#">Book free inspection</a><a class="s" href="#">See our work</a></div>
+        </div>
+        <div>
+          <div class="stat"><div class="n">+40%</div><div class="l">The hillside complexity premium — work generalists avoid</div></div>
+          <div class="stat"><div class="n">2</div><div class="l">Active faults we engineer against: Hayward & Calaveras</div></div>
+        </div>
       </div>
     </div>
-    <div class="strip"><span>PUSH & HELICAL PIERS</span><span>NEW HOME FOUNDATIONS</span><span>ADU SLABS</span><span>SEISMIC RETROFIT</span><span>LICENSED & BONDED</span></div>
+    <div class="strip"><span>PUSH & HELICAL PIERS</span><span>HILLSIDE STABILIZATION</span><span>RETAINING WALLS</span><span>SEISMIC RETROFIT</span><span>ADU FOUNDATIONS</span></div>
     <div class="svcs">
-      <div class="svc"><div class="tag">REPAIR</div><h3>Foundation Repair</h3><p>Settlement, cracks, uneven floors. Push and helical pier underpinning for clay and hillside lots.</p></div>
-      <div class="svc"><div class="tag">NEW BUILD</div><h3>New Construction</h3><p>Slabs and stem walls for custom homes, additions, and ADUs — engineered for your site.</p></div>
-      <div class="svc"><div class="tag">SEISMIC</div><h3>Earthquake Retrofit</h3><p>EBB-program eligible bolt-downs and soft-story reinforcement across the fault zone.</p></div>
-      <div class="svc"><div class="tag">DRAINAGE</div><h3>Crawl Space & Drainage</h3><p>Encapsulation and water management that protects the foundation for the long haul.</p></div>
+      <div class="svc"><div class="tag">CORE</div><h3>Foundation Repair</h3><p>Settlement, cracks, uneven floors. Push and helical pier underpinning for clay and hillside lots.</p></div>
+      <div class="svc"><div class="tag">CORE</div><h3>Hillside Stabilization</h3><p>Caissons, grade beams, engineered retaining walls and drainage for homes on the slope.</p></div>
+      <div class="svc"><div class="tag">CORE</div><h3>Seismic Retrofit</h3><p>EBB-program eligible bolt-downs and cripple-wall bracing across the fault zone.</p></div>
+      <div class="svc"><div class="tag">GROWTH</div><h3>ADU Foundations</h3><p>Engineered slabs for backyard units — permit-handled, the natural extension of new building work.</p></div>
     </div>
   </div></div>
 </div>
@@ -598,32 +656,40 @@
 
 <!-- ============ VARIANT 3 ============ -->
 <div class="variant" id="v-3">
-  <div class="section-tag">↳ Identity card — premium/refined · espresso + bronze + cream · Bricolage Grotesque</div>
+  <div class="section-tag">↳ Identity card — dramatic dusk mountain · charcoal + ember · Bricolage Grotesque</div>
   <div class="idcard-wrap"><div class="idcard v3-id">
     <div class="logo-cell">
       <div class="v3-logo">
         <div class="mark">
-          <svg viewBox="0 0 70 70" fill="none">
-            <circle cx="35" cy="35" r="33" stroke="#b08d57" stroke-width="2"/>
-            <path d="M16 46 L35 20 L54 46" stroke="#b08d57" stroke-width="3" fill="none"/>
-            <path d="M26 46 L35 33 L44 46" fill="#e7ddd0"/>
-            <rect x="16" y="48" width="38" height="3" fill="#b08d57"/>
+          <svg viewBox="0 0 84 84" fill="none">
+            <defs>
+              <linearGradient id="diablo-sun" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#f6b06f"/><stop offset="1" stop-color="#cf5f3a"/>
+              </linearGradient>
+            </defs>
+            <circle cx="42" cy="38" r="34" stroke="#e8915b" stroke-width="1.5" opacity="0.5"/>
+            <circle cx="42" cy="34" r="13" fill="url(#diablo-sun)"/>
+            <path d="M8 66 L30 34 L40 47 L54 22 L76 66 Z" fill="#1b1521"/>
+            <path d="M8 66 L30 34 L40 47 L54 22 L76 66 Z" stroke="#e8915b" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+            <path d="M30 34 L34 40 L27 44 Z" fill="#e8915b" opacity="0.8"/>
+            <path d="M54 22 L60 32 L50 36 Z" fill="#e8915b" opacity="0.8"/>
           </svg>
         </div>
         <div class="name">Diablo Foundation</div>
-        <div class="sub">East Bay</div>
+        <div class="sub">Anchored to the mountain</div>
       </div>
     </div>
     <div class="meta-cell">
       <div class="swatches">
-        <div class="swatch" style="background:#1a1714"></div>
-        <div class="swatch" style="background:#b08d57"></div>
-        <div class="swatch" style="background:#fbf8f3"></div>
-        <div class="swatch" style="background:#5c544a"></div>
+        <div class="swatch" style="background:#1b1521"></div>
+        <div class="swatch" style="background:#6e3528"></div>
+        <div class="swatch" style="background:#e8915b"></div>
+        <div class="swatch" style="background:#f3e4d4"></div>
       </div>
+      <div class="meta-row"><b>Concept</b>Mt. Diablo ridgeline at dusk — the landmark the brand is named for</div>
       <div class="meta-row"><b>Typeface</b>Bricolage Grotesque (display) · Manrope (body)</div>
-      <div class="meta-row"><b>Voice</b>Aspirational, design-forward, "the premium choice." Named for Mt. Diablo.</div>
-      <div class="meta-row"><b>Best for</b>High-end custom homes, architects, $2M+ Walnut Creek builds.</div>
+      <div class="meta-row"><b>Voice</b>Bold, premium, unmistakably local. The mountain = authority over the terrain.</div>
+      <div class="meta-row"><b>Best for</b>The strongest brand-equity play — ownable, memorable, scalable.</div>
     </div>
   </div></div>
 
@@ -631,20 +697,26 @@
   <div class="landing-wrap"><div class="landing v3-land">
     <div class="nav">
       <div class="brand">Diablo Foundation</div>
-      <div class="links"><span>Repair</span><span>Build</span><span>Portfolio</span><span class="b">Consultation</span></div>
+      <div class="links"><span>Repair</span><span>Hillside</span><span>Portfolio</span><span class="b">Consultation</span></div>
     </div>
     <div class="hero">
-      <div class="kick">Foundation specialists · East Bay</div>
-      <h1>Built on the same ground you are.</h1>
-      <p>From stabilizing a century-old hillside home to pouring the foundation of a brand-new custom build — Diablo brings engineering precision and craft to the work beneath everything.</p>
-      <div class="cta"><a class="p" href="#">Request consultation</a><a class="s" href="#">View portfolio →</a></div>
+      <div class="sky"></div>
+      <svg class="range" viewBox="0 0 1200 160" preserveAspectRatio="none" fill="none">
+        <path d="M0 160 L0 96 L120 70 L240 104 L360 52 L480 88 L600 30 L720 76 L840 44 L960 92 L1080 60 L1200 88 L1200 160 Z" fill="#140f19"/>
+        <path d="M0 160 L0 120 L150 100 L320 128 L460 92 L640 124 L820 86 L1000 122 L1200 104 L1200 160 Z" fill="#0f0b14"/>
+      </svg>
+      <div class="inner">
+        <div class="kick">Foundation specialists · East Bay</div>
+        <h1>The mountain doesn't move. <em>Your home shouldn't either.</em></h1>
+        <p>On the slopes and clay of the East Bay, foundations shift, settle, and slide. Diablo brings engineering precision to the hardest ground in the region — stabilizing what's here and anchoring what's next.</p>
+        <div class="cta"><a class="p" href="#">Request consultation</a><a class="s" href="#">View portfolio →</a></div>
+      </div>
     </div>
-    <div class="ridge"></div>
     <div class="svcs">
-      <div class="svc"><div class="ic">R</div><div><h3>Foundation Repair</h3><p>Precision underpinning for settlement and seismic damage on expansive clay and sloped lots.</p></div></div>
-      <div class="svc"><div class="ic">N</div><div><h3>New Construction</h3><p>Engineered slabs and stem walls for custom homes built to last on demanding East Bay terrain.</p></div></div>
-      <div class="svc"><div class="ic">A</div><div><h3>ADU Foundations</h3><p>Backyard residences poured to spec — handling rebate programs and permitting end to end.</p></div></div>
-      <div class="svc"><div class="ic">S</div><div><h3>Seismic Retrofit</h3><p>Discreet, code-current reinforcement that protects both the structure and its value.</p></div></div>
+      <div class="svc"><div class="ic">01</div><div><h3>Foundation Repair</h3><p>Precision underpinning for settlement and movement on expansive clay and sloped lots.</p></div></div>
+      <div class="svc"><div class="ic">02</div><div><h3>Hillside Stabilization</h3><p>Caissons, grade beams, and engineered retaining walls for homes built on the slope.</p></div></div>
+      <div class="svc"><div class="ic">03</div><div><h3>Seismic Retrofit</h3><p>Discreet, code-current reinforcement that protects both the structure and its value.</p></div></div>
+      <div class="svc"><div class="ic">04</div><div><h3>ADU Foundations</h3><p>Engineered slabs for backyard residences — permitting and inspection handled end to end.</p></div></div>
     </div>
   </div></div>
 </div>
@@ -705,58 +777,70 @@
 
 <!-- ============ VARIANT 5 ============ -->
 <div class="variant" id="v-5">
-  <div class="section-tag">↳ Identity card — editorial/trustworthy · warm slate + rust · Instrument Serif</div>
+  <div class="section-tag">↳ Identity card — geological strata · ink + rust + sediment · Archivo Black</div>
   <div class="idcard-wrap"><div class="idcard v5-id">
     <div class="logo-cell">
       <div class="v5-logo">
         <div class="mark">
-          <svg viewBox="0 0 58 58" fill="none">
-            <rect x="8" y="36" width="42" height="7" fill="#2b2723"/>
-            <rect x="8" y="45" width="42" height="4" fill="#9c4a2f"/>
-            <path d="M14 36 V20 H44 V36" stroke="#2b2723" stroke-width="3" fill="none"/>
-            <circle cx="29" cy="27" r="6" fill="#9c4a2f"/>
+          <svg viewBox="0 0 72 72" fill="none">
+            <rect x="6" y="44" width="60" height="11" rx="2" fill="#5e5238"/>
+            <rect x="6" y="33" width="60" height="11" rx="2" fill="#8a6b3f"/>
+            <rect x="6" y="22" width="60" height="11" rx="2" fill="#b8854a"/>
+            <rect x="6" y="11" width="60" height="11" rx="2" fill="#d9663f"/>
+            <path d="M30 11 L30 55 M42 11 L42 55" stroke="#16110d" stroke-width="2.5" opacity="0.35"/>
+            <rect x="32" y="6" width="8" height="14" rx="1" fill="#16110d"/>
           </svg>
         </div>
-        <div class="name">Bayrock</div>
+        <div class="name">Bay<b>rock</b></div>
         <div class="sub">Foundations · East Bay</div>
       </div>
     </div>
     <div class="meta-cell">
       <div class="swatches">
-        <div class="swatch" style="background:#2b2723"></div>
-        <div class="swatch" style="background:#9c4a2f"></div>
-        <div class="swatch" style="background:#ece9e4"></div>
-        <div class="swatch" style="background:#5a544c"></div>
+        <div class="swatch" style="background:#16110d"></div>
+        <div class="swatch" style="background:#d9663f"></div>
+        <div class="swatch" style="background:#b8854a"></div>
+        <div class="swatch" style="background:#ece2d4"></div>
       </div>
-      <div class="meta-row"><b>Typeface</b>Instrument Serif (display) · Archivo (body)</div>
-      <div class="meta-row"><b>Voice</b>Solid, dependable, a touch of heritage. "Rock" = stability built in.</div>
-      <div class="meta-row"><b>Best for</b>Trust-led homeowner marketing; brandable & trademarkable beyond geo.</div>
+      <div class="meta-row"><b>Concept</b>Stacked rock strata + a pier driven through to bedrock</div>
+      <div class="meta-row"><b>Typeface</b>Archivo Black (display) · Space Mono (detail)</div>
+      <div class="meta-row"><b>Voice</b>Bold, physical, immovable. "Rock" + the layered ground made literal.</div>
+      <div class="meta-row"><b>Best for</b>Trust-led, trademarkable, scales well beyond a single geography.</div>
     </div>
   </div></div>
 
   <div class="section-tag">↳ Landing page</div>
   <div class="landing-wrap"><div class="landing v5-land">
     <div class="nav">
-      <div class="brand">Bayrock</div>
-      <div class="links"><span>Repair</span><span>New Construction</span><span>About</span><span class="b">Free Inspection</span></div>
+      <div class="brand">Bay<b>rock</b></div>
+      <div class="links"><span>Repair</span><span>Hillside</span><span>About</span><span class="b">Free Inspection</span></div>
     </div>
     <div class="hero">
-      <div>
+      <svg class="strata" viewBox="0 0 500 600" preserveAspectRatio="xMidYMid slice" fill="none">
+        <rect x="0" y="0" width="500" height="600" fill="#1c1611"/>
+        <path d="M0 120 Q250 90 500 130 L500 220 Q250 195 0 215 Z" fill="#251c14"/>
+        <path d="M0 215 Q250 195 500 220 L500 320 Q250 300 0 305 Z" fill="#3a2a1a"/>
+        <path d="M0 305 Q250 300 500 320 L500 430 Q250 410 0 405 Z" fill="#5e4326"/>
+        <path d="M0 405 Q250 410 500 430 L500 600 L0 600 Z" fill="#7a5128"/>
+        <rect x="232" y="60" width="14" height="430" rx="3" fill="#d9663f"/>
+        <path d="M225 490 L253 490 L239 520 Z" fill="#d9663f"/>
+      </svg>
+      <div class="inner">
         <div class="kick">Foundation specialists · Walnut Creek & the East Bay</div>
-        <h1>Solid ground, <em>both ways.</em></h1>
-        <p>Whether your home is settling or you're breaking ground on a new one, Bayrock does the foundation work — and only the foundation work. That focus is why builders and homeowners trust us with what holds everything up.</p>
+        <h1>Down to <em>bedrock.</em></h1>
+        <p>The East Bay is built on shifting clay and sloping ground. We go deeper — underpinning, stabilizing, and anchoring homes to what actually holds. Foundations are all we do, and we do them to last.</p>
         <div class="cta"><a class="p" href="#">Book free inspection</a><a class="s" href="#">Our process</a></div>
       </div>
       <div class="quote">
-        <p>"We don't dabble in everything. We do foundations — repair and new build — and we do them better than the generalists."</p>
-        <div class="by">— The Bayrock promise</div>
+        <p>"We don't dabble in everything. We do foundations — and we do them better than the generalists."</p>
+        <div class="by">// The Bayrock promise</div>
       </div>
     </div>
     <div class="svcs">
       <div class="svc"><div class="n">01</div><h3>Foundation Repair</h3><p>Underpinning and stabilization for settlement, cracks, and movement.</p></div>
-      <div class="svc"><div class="n">02</div><h3>New Construction</h3><p>Slabs and stem walls for homes, additions, and ADUs.</p></div>
-      <div class="svc"><div class="n">03</div><h3>Seismic Retrofit</h3><p>Brace & bolt and soft-story work, EBB grant eligible.</p></div>
-      <div class="svc"><div class="n">04</div><h3>Crawl & Drainage</h3><p>Encapsulation and water management to protect the foundation.</p></div>
+      <div class="svc"><div class="n">02</div><h3>Hillside &amp; Retaining</h3><p>Caissons, grade beams, engineered walls and drainage on the slope.</p></div>
+      <div class="svc"><div class="n">03</div><h3>Seismic Retrofit</h3><p>Brace &amp; bolt and cripple-wall work, EBB grant eligible.</p></div>
+      <div class="svc"><div class="n">04</div><h3>ADU Foundations</h3><p>Engineered slabs for backyard units, permit-handled.</p></div>
     </div>
   </div></div>
 </div>
